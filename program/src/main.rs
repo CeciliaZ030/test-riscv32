@@ -4,6 +4,8 @@
 use std::sync::OnceLock;
 sp1_zkvm::entrypoint!(main);
 
+mod zk_op;
+
 pub trait ZkvmOperator: Send + Sync + 'static {}
 pub static ZKVM_OPERATOR: OnceLock<Box<dyn ZkvmOperator>> = OnceLock::new();
 
