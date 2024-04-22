@@ -2,6 +2,7 @@ use revm_precompile::{bn128::ADD_INPUT_LEN, utilities::right_pad, zk_op::ZkvmOpe
 use revm_primitives::keccak256;
 use sp1_zkvm::precompiles::{bn254::Bn254, secp256k1::ecrecover, utils::AffinePoint};
 
+mod other_test;
 #[derive(Debug)]
 pub struct Sp1Operator;
 

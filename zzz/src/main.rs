@@ -1,5 +1,6 @@
 use std::{fs, io::BufReader, path::{Path, PathBuf}, process::{Command, Stdio}, thread};
 use std::io::BufRead;
+use cargo_metadata::Message;
 use chrono::Local;
 use regex::Regex;
 
@@ -22,7 +23,6 @@ pub fn build_program(path: &str) {
     // Tell cargo to rerun the script only if program/{src, Cargo.toml, Cargo.lock} changes
     // Ref: https://doc.rust-lang.org/nightly/cargo/reference/build-scripts.html#rerun-if-changed
     let dirs = vec![
-        program_dir.join("src"),
         program_dir.join("Cargo.toml"),
         program_dir.join("Cargo.lock"),
     ];
@@ -46,8 +46,13 @@ pub fn build_program(path: &str) {
         current_datetime()
     );
 
-    execute_build_cmd(&program_dir)
-        .unwrap_or_else(|_| panic!("Failed to build `{}`.", root_package_name));
+    let target = root_package.unwrap().targets.iter().filter(|p| {
+        p.kind.iter().any(|k| k == "test")
+    }).collect::<Vec<_>>();
+    println!("target: {:?}", root_package.unwrap().targets);
+
+
+    execute_build_cmd(&program_dir).unwrap();
 }
 
 fn current_datetime() -> String {
@@ -67,11 +72,24 @@ fn execute_build_cmd(
     let root_package = metadata.root_package();
     let root_package_name = root_package.as_ref().map(|p| &p.name);
 
+    // println!("metadata: {:?}", metadata);
+    println!("root_package: {:?}", root_package_name);
     
     let build_target = "riscv32im-succinct-zkvm-elf";
+    let rust_flags = [
+            "-C",
+            "passes=loweratomic",
+            "-C",
+            "link-arg=-Ttext=0x00200800",
+            "-C",
+            "panic=abort",
+        ];
+
     let mut cmd = Command::new("cargo");
     cmd.current_dir(program_dir)
         .env("RUSTUP_TOOLCHAIN", "succinct")
+        .env("CARGO_MANIFEST_DIR", program_dir)
+        .env("CARGO_ENCODED_RUSTFLAGS", rust_flags.join("\x1f"))
         .args([
             "test",
             "--release",
@@ -80,32 +98,44 @@ fn execute_build_cmd(
             "--locked",
             "--no-run",
         ])
-        .env("CARGO_MANIFEST_DIR", program_dir)
-        .env_remove("RUSTC")
         .stdout(Stdio::piped())
         .stderr(Stdio::piped());
     let mut child = cmd.spawn()?;
 
     let stdout = BufReader::new(child.stdout.take().unwrap());
     let stderr = BufReader::new(child.stderr.take().unwrap());
-    
-    
-    // let stdout_lines: Vec<Result<String, _>> = stdout.lines().collect::<Vec<_>>();
-    // println!("stdout_lines: {:?}", stdout_lines);
-    let elf_path = stderr.lines().last().and_then(|line| {
-        extract_path( &line.unwrap())
-    }).expect("Failed to extract path from cargo test output");
-    println!("elf_path: {:?}", elf_path);
-    
 
-    let elf_dir = metadata.target_directory.parent().unwrap().join("elf");
-    let elf_path_ = metadata.target_directory.parent().unwrap().join(elf_path.to_str().unwrap());
-    fs::create_dir_all(&elf_dir)?;
-    println!("elf_dir: {:?}", elf_dir);
-    println!("elf_path: {:?}", elf_path_);
 
-    let result_elf_path = elf_dir.join("riscv32im-succinct-zkvm-elf-test");
-    fs::copy(elf_path_, &result_elf_path)?;
+    let elf_paths = stderr
+        .lines()
+        .filter(|line| {
+            line.as_ref()
+                .is_ok_and(|l| l.contains("Executable unittests"))
+        })
+        .map(|line| extract_path(&line.unwrap()).unwrap())
+        .collect::<Vec<_>>();
+    println!("elf_paths: {:?}", elf_paths);
+    
+    let src_elf_path = metadata
+        .target_directory
+        .parent()
+        .unwrap()
+        .join(elf_paths.first().expect("Failed to extract carge test elf path").to_str().unwrap());
+    println!("src_elf_path: {:?}", src_elf_path);
+
+    let mut dest_elf_path = metadata.target_directory
+        .parent()
+        .unwrap()
+        .join("elf");
+    fs::create_dir_all(&dest_elf_path)?;
+    dest_elf_path = dest_elf_path.join("riscv32im-succinct-zkvm-elf-test");
+    println!("dest_elf_path: {:?}", dest_elf_path);
+
+    fs::copy(&src_elf_path, &dest_elf_path)?;
+    println!(
+        "Copied test elf from\n[{:?}]\nto\n[{:?}]",
+        src_elf_path, dest_elf_path
+    );
 
     // Pipe stdout and stderr to the parent process with [sp1] prefix
     let stdout_handle = thread::spawn(move || {
@@ -114,10 +144,15 @@ fn execute_build_cmd(
         });
     });
 
+
     // stderr.lines().for_each(|line| {
-    //     eprintln!("[sp1-err] {}", line.unwrap());
+    //     let line = line.unwrap();
+    //     if line.contains("Executable unittests") {
+    //         let ep = extract_path( &line);
+    //         println!("ep: {:?}", ep);
+    //     }
+    //     eprintln!("[sp1-err] {}", line);
     // });
-    // println!("stderr last {:?}", stderr.lines().last().unwrap().unwrap());
 
     stdout_handle.join().unwrap();
 

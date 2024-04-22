@@ -1,0 +1,52 @@
+[package]
+name = "raiko-lib"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+raiko-primitives = { workspace = true }
+
+alloy-rlp = { workspace = true }
+alloy-rlp-derive = { workspace = true }
+alloy-sol-types = { workspace = true }
+alloy-primitives = { workspace = true }
+alloy-rpc-types = { workspace = true }
+alloy-consensus = { workspace = true }
+alloy-network = { workspace = true }
+
+anyhow = { workspace = true }
+hashbrown = { workspace = true }
+libflate = { workspace = true }
+once_cell = { workspace = true }
+revm = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true, optional = true }
+serde_with = { workspace = true, optional = true }
+thiserror-no-std = { workspace = true }
+url = { workspace = true }
+hex = { workspace = true }
+
+# [target.'cfg(feature = "std")'.dependencies]
+thiserror = { workspace = true, optional = true }
+flate2 = { workspace = true, optional = true }
+log = { workspace = true, optional = true }
+
+tokio = { workspace = true, optional = true }
+chrono = { workspace = true, optional = true }
+
+[dev-dependencies]
+bincode = "1.3"
+
+[features]
+std = [
+  # always use no-std for revm since we use hashbrown in workspace
+  # "revm/std",
+  "dep:thiserror",
+  "anyhow/std",
+  "dep:chrono",
+  "dep:flate2",
+  "dep:log",
+  "dep:serde_json",
+  "dep:serde_with",
+  # "dep:tokio",
+  ]
