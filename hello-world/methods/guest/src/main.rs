@@ -28,7 +28,7 @@ mod test {
     fn fib() {
         let mut a = 1;
         let mut b = 1;
-        for _ in 0..11 {
+        for _ in 0..12 {
             let c = a + b;
             a = b;
             b = c;

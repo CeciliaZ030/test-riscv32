@@ -44,7 +44,10 @@ impl GuestListEntry {
     /// Builds the [GuestListEntry] by reading the ELF from disk, and calculating the associated
     /// image ID.
     pub fn build(name: &str, elf_path: &str) -> Result<Self> {
+        println!("*************  {} *************", elf_path);
         let elf = std::fs::read(elf_path)?;
+        println!("******--*****  {} ******--*****", elf_path);
+
         // Todo(Cecilia)
         let image_id = [9u32; DIGEST_WORDS];
 
@@ -65,16 +68,23 @@ impl GuestListEntry {
         }
 
         let upper = self.name.to_uppercase().replace('-', "_");
+        let mut parts: Vec<&str> = upper.split('_').collect();
+        parts.pop();
+        parts.push("TEST");
+        let upper = parts.join("_");
+
         let image_id: [u32; DIGEST_WORDS] = self.image_id;
         let elf_path: &str = &self.path;
         let elf_contents: &[u8] = &self.elf;
-        format!(
+        let f = format!(
             r##"
 pub const {upper}_ELF: &[u8] = &{elf_contents:?};
 pub const {upper}_ID: [u32; 8] = {image_id:?};
 pub const {upper}_PATH: &str = r#"{elf_path}"#;
 "##
-        )
+        );
+        println!("f: {}", f);
+        f
     }
 
     #[cfg(feature = "guest-list")]

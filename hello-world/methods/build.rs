@@ -8,6 +8,7 @@ use std::{
     path::{Path, PathBuf},
     process::{Command, Stdio},
 };
+use regex::Regex;
 
 use cargo_metadata::{Message, MetadataCommand, Package};
 
@@ -35,27 +36,27 @@ fn embed_tests() -> Vec<GuestListEntry> {
         .unwrap()
         .parent() // $profile
         .unwrap()
-        .join("riscv-guest");
+        .join("riscv-guest-test");
 
     // Read the cargo metadata for info from `[package.metadata.risc0]`.
     let pkg = get_package(env::var("CARGO_MANIFEST_DIR").unwrap());
     let manifest_dir = pkg.manifest_path.parent().unwrap();
     // methods = ["guest"]
-    let guest_packages = guest_packages(&pkg);
+    let mut guest_packages = guest_packages(&pkg);
 
     let methods_path = out_dir.join("test.rs");
     let mut methods_file = File::create(&methods_path).unwrap();
 
     let mut guest_list = vec![];
     println!("for guest_pkg in guest_packages");
-    for guest_pkg in guest_packages {
+    for guest_pkg in &mut guest_packages {
         println!("Building guest package {}.{}", pkg.name, guest_pkg.name);
 
-        build_guest_package(&guest_pkg, &guest_dir, None);
+        build_guest_package(guest_pkg, &guest_dir, None);
         
         println!("{:?} ----- {:?}", guest_pkg, guest_dir);
 
-        let methods = guest_methods(&guest_pkg, &guest_dir);
+        let methods = guest_methods(guest_pkg, &guest_dir);
         for method in methods {
             println!("---------------- {}, {:?}", method.name, method.image_id);
             methods_file
@@ -120,14 +121,22 @@ fn guest_methods(pkg: &Package, target_dir: impl AsRef<Path>) -> Vec<GuestListEn
     let profile = if is_debug() { "debug" } else { "release" };
     pkg.targets
         .iter()
-        .filter(|target| target.kind.iter().any(|kind| kind == "test"))
+        .filter(|target| target.kind.iter().any(|kind| kind == "bin"))
         .map(|target| {
+            let target_dir_ = target_dir
+            .as_ref()
+            .join("riscv32im-risc0-zkvm-elf")
+            .join(profile)
+            .join("deps")
+            .join(&target.name);
+            println!(" guest_methods target_dir_: {:?}", target_dir_);
             GuestListEntry::build(
                 &target.name,
                 target_dir
                     .as_ref()
                     .join("riscv32im-risc0-zkvm-elf")
                     .join(profile)
+                    .join("deps")
                     .join(&target.name)
                     .to_str()
                     .unwrap(),
@@ -139,7 +148,7 @@ fn guest_methods(pkg: &Package, target_dir: impl AsRef<Path>) -> Vec<GuestListEn
 
 // Builds a package that targets the riscv guest into the specified target
 // directory.
-fn build_guest_package<P>(pkg: &Package, target_dir: P, runtime_lib: Option<&str>)
+fn build_guest_package<P>(pkg: &mut Package, target_dir: P, runtime_lib: Option<&str>)
 where
     P: AsRef<Path>,
 {
@@ -157,7 +166,7 @@ where
     if !is_debug() {
         cmd.args(["--release"]);
     }
-    println!("Building guest package: {:?}", cmd);
+    println!("Building guest package:  {:?}", cmd);
 
     let mut child = cmd
         .stderr(Stdio::piped())
@@ -189,7 +198,22 @@ where
 
     for line in BufReader::new(stderr).lines() {
         match &mut tty {
-            Some(tty) => writeln!(tty, "{}: {}", pkg.name, line.unwrap()).unwrap(),
+            Some(tty) => {
+                let line = line.unwrap();
+                if line.contains("Executable unittests") {
+
+                    let success = pkg.targets
+                        .get_mut(0)
+                        .is_some_and(|t| {
+                            t.name = extract_path(&line).unwrap().file_name().unwrap().to_str().unwrap().to_string();
+                            true
+                        });
+                    if !success {
+                        eprintln!("Failed to extract test target name from: {}", line);
+                    }
+                }       
+                writeln!(tty, "{}: {}", pkg.name, line).unwrap()
+            },
             None => eprintln!("{}", line.unwrap()),
         }
     }
@@ -198,4 +222,12 @@ where
     if !res.success() {
         std::process::exit(res.code().unwrap());
     }
+}
+
+
+fn extract_path(line: &str) -> Option<PathBuf> {
+    let re = Regex::new(r"\(([^)]+)\)").unwrap();
+    re.captures(line)
+        .and_then(|caps| caps.get(1).map(|m| m.as_str().to_string()))
+        .and_then(|s| Some(PathBuf::from(s)))
 }
