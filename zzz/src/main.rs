@@ -13,6 +13,7 @@ fn extract_path(line: &str) -> Option<PathBuf> {
 }
 
 fn main() {
+    
     println!("Hello, world!");
     build_program("../program");
 }

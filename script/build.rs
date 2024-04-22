@@ -10,7 +10,6 @@ fn main() {
     println!("Hello, world!");
     build_test("../program");
     build_program("../program");
-
 }
 
 pub fn build_test(path: &str) {
@@ -87,22 +86,37 @@ fn execute_build_cmd(
     let stderr = BufReader::new(child.stderr.take().unwrap());
     
     
-    // let stdout_lines: Vec<Result<String, _>> = stdout.lines().collect::<Vec<_>>();
-    // println!("stdout_lines: {:?}", stdout_lines);
-    let elf_path = stderr.lines().last().and_then(|line| {
-        extract_path( &line.unwrap())
-    }).expect("Failed to extract path from cargo test output");
-    println!("elf_path: {:?}", elf_path);
+    let elf_paths = stderr
+        .lines()
+        .filter(|line| {
+            line.as_ref()
+                .is_ok_and(|l| l.contains("Executable unittests"))
+        })
+        .map(|line| extract_path(&line.unwrap()).unwrap())
+        .collect::<Vec<_>>();
+    println!("elf_paths: {:?}", elf_paths);
     
+    let src_elf_path = metadata
+        .target_directory
+        .parent()
+        .unwrap()
+        .join(elf_paths.first().expect("Failed to extract carge test elf path").to_str().unwrap());
+    println!("src_elf_path: {:?}", src_elf_path);
 
-    let elf_dir = metadata.target_directory.parent().unwrap().join("elf");
-    let elf_path_ = metadata.target_directory.parent().unwrap().join(elf_path.to_str().unwrap());
-    fs::create_dir_all(&elf_dir)?;
-    println!("elf_dir: {:?}", elf_dir);
-    println!("elf_path: {:?}", elf_path_);
+    let mut dest_elf_path = metadata.target_directory
+        .parent()
+        .unwrap()
+        .join("elf");
+    fs::create_dir_all(&dest_elf_path)?;
+    dest_elf_path = dest_elf_path.join("riscv32im-succinct-zkvm-elf-test");
+    println!("dest_elf_path: {:?}", dest_elf_path);
 
-    let result_elf_path = elf_dir.join("riscv32im-succinct-zkvm-elf-test");
-    fs::copy(elf_path_, &result_elf_path)?;
+    fs::copy(&src_elf_path, &dest_elf_path)?;
+    println!(
+        "Copied test elf from\n[{:?}]\nto\n[{:?}]",
+        src_elf_path, dest_elf_path
+    );
+
 
     // Pipe stdout and stderr to the parent process with [sp1] prefix
     let stdout_handle = thread::spawn(move || {
