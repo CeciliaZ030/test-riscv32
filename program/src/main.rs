@@ -69,7 +69,7 @@ mod ttt {
     
     #[test]
     fn test_fibo2() {
-        let n = 10;
+        let n = 12;
         let mut a: u128 = 0;
         let mut b: u128 = 1;
         let mut sum: u128;

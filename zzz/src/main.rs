@@ -4,6 +4,9 @@ use cargo_metadata::Message;
 use chrono::Local;
 use regex::Regex;
 
+#[cfg(test)]
+mod tests;
+
 fn extract_path(line: &str) -> Option<PathBuf> {
     let re = Regex::new(r"\(([^)]+)\)").unwrap();
     re

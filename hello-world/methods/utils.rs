@@ -86,20 +86,6 @@ pub const {upper}_PATH: &str = r#"{elf_path}"#;
         println!("f: {}", f);
         f
     }
-
-    #[cfg(feature = "guest-list")]
-    fn codegen_list_entry(&self) -> String {
-        let upper = self.name.to_uppercase().replace('-', "_");
-        format!(
-            r##"
-    GuestListEntry {{
-        name: std::borrow::Cow::Borrowed("{upper}"),
-        elf: std::borrow::Cow::Borrowed({upper}_ELF),
-        image_id: {upper}_ID,
-        path: std::borrow::Cow::Borrowed({upper}_PATH),
-    }}"##
-        )
-    }
 }
 
 pub fn is_debug() -> bool {
