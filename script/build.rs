@@ -8,8 +8,8 @@ use sp1_helper::build_program;
 
 fn main() {
     println!("Hello, world!");
+    // build_program("../program");
     build_test("../program");
-    build_program("../program");
 }
 
 pub fn build_test(path: &str) {
@@ -17,14 +17,14 @@ pub fn build_test(path: &str) {
 
     // Tell cargo to rerun the script only if program/{src, Cargo.toml, Cargo.lock} changes
     // Ref: https://doc.rust-lang.org/nightly/cargo/reference/build-scripts.html#rerun-if-changed
-    let dirs = vec![
-        program_dir.join("src"),
-        program_dir.join("Cargo.toml"),
-        program_dir.join("Cargo.lock"),
-    ];
-    for dir in dirs {
-        println!("cargo:rerun-if-changed={}", dir.display());
-    }
+    // let dirs = vec![
+    //     program_dir.join("src"),
+    //     program_dir.join("Cargo.toml"),
+    //     program_dir.join("Cargo.lock"),
+    // ];
+    // for dir in dirs {
+    //     println!("cargo:rerun-if-changed={}", dir.display());
+    // }
 
     // Print a message so the user knows that their program was built. Cargo caches warnings emitted
     // from build scripts, so we'll print the date/time when the program was built.
@@ -36,14 +36,15 @@ pub fn build_test(path: &str) {
         .as_ref()
         .map(|p| p.name.as_str())
         .unwrap_or("Program");
-    println!(
-        "cargo:warning={} built at {}",
-        root_package_name,
-        current_datetime()
-    );
 
     execute_build_cmd(&program_dir)
         .unwrap_or_else(|_| panic!("Failed to build `{}`.", root_package_name));
+    
+    println!(
+        "cargo::warning={} built at {}",
+        root_package_name,
+        current_datetime()
+    );
 }
 
 fn current_datetime() -> String {
@@ -89,6 +90,7 @@ fn execute_build_cmd(
     let elf_paths = stderr
         .lines()
         .filter(|line| {
+            println!("line: {:?}", line.as_ref().unwrap());
             line.as_ref()
                 .is_ok_and(|l| l.contains("Executable unittests"))
         })

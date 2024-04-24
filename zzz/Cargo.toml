@@ -9,3 +9,6 @@ edition = "2021"
 cargo_metadata = "0.18.1"
 chrono = { version = "0.4.34", default-features = false, features = ["clock"] }
 regex = "1.5.4"
+
+[dev-dependencies]
+sp1-sdk = { git = "https://github.com/succinctlabs/sp1.git" }

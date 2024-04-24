@@ -18,10 +18,10 @@ fn extract_path(line: &str) -> Option<PathBuf> {
 fn main() {
     
     println!("Hello, world!");
-    build_program("../program");
+    build_test("../program");
 }
 
-pub fn build_program(path: &str) {
+pub fn build_test(path: &str) {
     let program_dir = std::path::Path::new(path);
 
     // Tell cargo to rerun the script only if program/{src, Cargo.toml, Cargo.lock} changes
@@ -113,6 +113,7 @@ fn execute_build_cmd(
     let elf_paths = stderr
         .lines()
         .filter(|line| {
+            println!("line: {:?}", line.as_ref().unwrap());
             line.as_ref()
                 .is_ok_and(|l| l.contains("Executable unittests"))
         })

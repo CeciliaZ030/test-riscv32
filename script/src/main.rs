@@ -3,6 +3,9 @@
 use std::default;
 
 use sp1_sdk::{ProverClient, SP1Prover, SP1Stdin};
+use raiko_lib::{
+    input::{GuestInput, GuestOutput, WrappedHeader},
+};
 
 const ELF: &[u8] = include_bytes!("../../program/elf/riscv32im-succinct-zkvm-elf");
 const TEST_ELF: &[u8] = include_bytes!("../../program/elf/riscv32im-succinct-zkvm-elf-test");
@@ -14,8 +17,7 @@ extern crate test;
 fn main() {
     // Generate proof.
     let mut stdin = SP1Stdin::new();
-    let n = 186u32;
-    stdin.write::<u32>(&n);
+    stdin.write::<u32>(&GuestInput::default());
 
     let mut stdint = SP1Stdin::new();
     stdint.write::<Vec<String>>(&Vec::new());

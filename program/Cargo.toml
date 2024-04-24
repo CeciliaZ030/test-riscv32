@@ -5,17 +5,19 @@ name = "xxx-program"
 edition = "2021"
 
 [dependencies]
-# raiko-lib = { path = "../lib", features = ["std"] }
+raiko-lib = { path = "../lib", features = ["std"] }
+serde = { version = "1.0", features = ["derive"] }
 
 sp1-zkvm = { git = "https://github.com/succinctlabs/sp1.git" }
-# revm-precompile = { git = "https://github.com/taikoxyz/revm.git", branch = "feat/zk-op", default-features = false, features = [
-#     "taiko",
-#     "std",
-# ] }
-# revm-primitives = { git = "https://github.com/taikoxyz/revm.git", branch = "feat/zk-op", default-features = false, features = [
-#     "taiko",
-#     "std",
-# ] }
+revm-precompile = { git = "https://github.com/taikoxyz/revm.git", branch = "feat/zk-op", default-features = false, features = [
+    "taiko",
+    "std",
+] }
+sha2-v0-10-8 = { git = "https://github.com/sp1-patches/RustCrypto-hashes", package = "sha2", branch = "v0.10.8" }
+revm-primitives = { git = "https://github.com/taikoxyz/revm.git", branch = "feat/zk-op", default-features = false, features = [
+    "taiko",
+    "std",
+] }
 
 [dev-dependencies]
 substrate-bn = "0.6.0"
