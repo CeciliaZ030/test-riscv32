@@ -22,7 +22,7 @@ pub fn main() {
             ZkOperation::Bn128Mul,
             ZkOperation::Secp256k1,
         ]))
-        .expect("Failed to set ZkvmOperations");
+        .expect("Failed to set ZkvmOperationss");
 
     // let build_result = TaikoStrategy::build_from(&input);
 

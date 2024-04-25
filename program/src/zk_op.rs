@@ -163,6 +163,8 @@ mod test {
             0, 0, 0, 0, 0, 0,
         ];
 
+        let cunt = 1;
+
         // Generate G1 in revm
         let p = substrate_bn::G1::one();
         // Extract x, y big-endian bytes
