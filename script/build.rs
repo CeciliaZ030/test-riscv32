@@ -8,7 +8,7 @@ fn main() {
     
     println!("Hello, world!");
     sp1_helper::build_program("../program");
-    // build_test("../program");
+    build_test("../program");
 }
 
 pub fn build_test(path: &str) {
@@ -86,6 +86,7 @@ fn execute_build_cmd(
             "--locked",
             "--no-run",
         ])
+        .env_remove("RUSTC")
         .stdout(Stdio::piped())
         .stderr(Stdio::piped());
     let mut child = cmd.spawn()?;
