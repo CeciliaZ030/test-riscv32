@@ -265,6 +265,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "sp1-helper"
+version = "0.1.0"
+source = "git+https://github.com/succinctlabs/sp1.git#18d6df3b6c0c3b2ae329622df6ec64ac331bc2c8"
+dependencies = [
+ "cargo_metadata",
+ "chrono",
+]
+
+[[package]]
 name = "syn"
 version = "2.0.58"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -428,4 +437,5 @@ dependencies = [
  "cargo_metadata",
  "chrono",
  "regex",
+ "sp1-helper",
 ]

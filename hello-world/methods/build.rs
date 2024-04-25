@@ -65,7 +65,7 @@ fn embed_tests() -> Vec<GuestListEntry> {
             guest_list.push(method);
         }
     }
-    println!("cargo:rerun-if-changed={}", methods_path.display());
+    println!("cargo::rerun-if-changed={}", methods_path.display());
     guest_list
 }
 
@@ -123,23 +123,16 @@ fn guest_methods(pkg: &Package, target_dir: impl AsRef<Path>) -> Vec<GuestListEn
         .iter()
         .filter(|target| target.kind.iter().any(|kind| kind == "bin"))
         .map(|target| {
-            let target_dir_ = target_dir
-            .as_ref()
-            .join("riscv32im-risc0-zkvm-elf")
-            .join(profile)
-            .join("deps")
-            .join(&target.name);
-            println!(" guest_methods target_dir_: {:?}", target_dir_);
+            let target_dir = target_dir
+                .as_ref()
+                .join("riscv32im-risc0-zkvm-elf")
+                .join(profile)
+                .join("deps")
+                .join(&target.name);
+                println!(" guest_methods target_dir_: {:?}", target_dir);
             GuestListEntry::build(
                 &target.name,
-                target_dir
-                    .as_ref()
-                    .join("riscv32im-risc0-zkvm-elf")
-                    .join(profile)
-                    .join("deps")
-                    .join(&target.name)
-                    .to_str()
-                    .unwrap(),
+                target_dir.to_str().unwrap(),
             )
             .unwrap()
         })

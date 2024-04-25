@@ -1,11 +1,13 @@
-use std::{fs, io::BufReader, path::{Path, PathBuf}, process::{Command, Stdio}, thread};
+use std::{collections::HashMap, env, fs, hash::Hash, io::BufReader, iter, path::{Path, PathBuf}, process::{Command, Stdio}, thread};
 use std::io::BufRead;
-use cargo_metadata::Message;
+use cargo_metadata::{Message, Metadata, Target};
 use chrono::Local;
 use regex::Regex;
 
-#[cfg(test)]
-mod tests;
+// #[cfg(test)]
+// mod tests;
+
+mod utils;
 
 fn extract_path(line: &str) -> Option<PathBuf> {
     let re = Regex::new(r"\(([^)]+)\)").unwrap();
@@ -22,24 +24,39 @@ fn main() {
     build_test("../cunt");
 }
 
+pub fn rerun_if_changed(paths: Vec<PathBuf>, env_vars: Vec<&str>) {
+    // Only work in build.rs
+    // Tell cargo to rerun the script only if program/{src, Cargo.toml, Cargo.lock} changes
+    // Ref: https://doc.rust-lang.org/nightly/cargo/reference/build-scripts.html#rerun-if-changed
+    for p in paths {
+        println!("cargo::rerun-if-changed={}", p.display());
+    }
+    for v in env_vars {
+        println!("cargo::rerun-if-env-changed={}", v);
+    }
+}
+
+pub fn parse_metadata(path: &str) -> Metadata {
+    let manifest =  std::path::Path::new(path).join("Cargo.toml");
+    let mut metadata_cmd = cargo_metadata::MetadataCommand::new();
+    metadata_cmd.manifest_path(manifest).exec().unwrap()
+}
+
+pub fn format_flags(flag: &str, items: &Vec<String>) -> Vec<String> {
+    items.iter().flat_map(|i| vec![flag.to_owned(), i.to_owned()]).collect()
+}
+
 pub fn build_test(path: &str) {
     let program_dir = std::path::Path::new(path);
 
-    // Tell cargo to rerun the script only if program/{src, Cargo.toml, Cargo.lock} changes
-    // Ref: https://doc.rust-lang.org/nightly/cargo/reference/build-scripts.html#rerun-if-changed
     let dirs = vec![
         program_dir.join("Cargo.toml"),
         program_dir.join("Cargo.lock"),
     ];
-    for dir in dirs {
-        println!("cargo:rerun-if-changed={}", dir.display());
-    }
+    rerun_if_changed(dirs, vec!["DUMMY______"]);
 
-    // Print a message so the user knows that their program was built. Cargo caches warnings emitted
-    // from build scripts, so we'll print the date/time when the program was built.
-    let metadata_file = program_dir.join("Cargo.toml");
-    let mut metadata_cmd = cargo_metadata::MetadataCommand::new();
-    let metadata = metadata_cmd.manifest_path(metadata_file).exec().unwrap();
+    
+    let metadata = parse_metadata(path);
     let root_package = metadata.root_package();
     let root_package_name = root_package
         .as_ref()
@@ -50,11 +67,6 @@ pub fn build_test(path: &str) {
         root_package_name,
         current_datetime()
     );
-
-    let target = root_package.unwrap().targets.iter().filter(|p| {
-        p.kind.iter().any(|k| k == "test")
-    }).collect::<Vec<_>>();
-    println!("target: {:?}", root_package.unwrap().targets);
 
 
     execute_build_cmd(&program_dir).unwrap();
@@ -163,4 +175,15 @@ fn execute_build_cmd(
     stdout_handle.join().unwrap();
 
     child.wait()
+}
+
+/// Build a [Command] with CARGO and RUSTUP_TOOLCHAIN environment variables
+/// removed.
+fn sanitized_cmd(tool: &str) -> Command {
+    let mut cmd = Command::new(tool);
+    for (key, _val) in env::vars().filter(|x| x.0.starts_with("CARGO")) {
+        cmd.env_remove(key);
+    }
+    cmd.env_remove("RUSTUP_TOOLCHAIN");
+    cmd
 }

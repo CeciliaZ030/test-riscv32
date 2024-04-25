@@ -7,13 +7,13 @@ edition = "2021"
 name = "zk"
 path = "src/zk.rs"
 
-# [[bin]]
-# name = "my_bin1"
-# path = "src/bin1.rs"
+[[bin]]
+name = "my_bin1"
+path = "src/bin1.rs"
 
-# [[bin]]
-# name = "my_bin2"
-# path = "src/bin2.rs"
+[[bin]]
+name = "my_bin2"
+path = "src/bin2.rs"
 
 [dependencies]
 sp1-zkvm ={ git = "https://github.com/succinctlabs/sp1.git", branch = "main" }
