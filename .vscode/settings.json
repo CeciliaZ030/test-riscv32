@@ -18,10 +18,10 @@
     //     "incomplete-features"
     // ],
     "rust-analyzer.linkedProjects": [
-        "program/Cargo.toml",
-        "script/Cargo.toml",
+        // "program/Cargo.toml",
+        // "script/Cargo.toml",
         "zzz/Cargo.toml",
-        "hello-world/Cargo.toml",
+        // "hello-world/Cargo.toml",
     ],
     "rust-analyzer.showUnlinkedFileNotification": false
 }

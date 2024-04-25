@@ -18,6 +18,7 @@ fn extract_path(line: &str) -> Option<PathBuf> {
 fn main() {
     
     println!("Hello, world!");
+    sp1_helper::build_program("../program");
     build_test("../program");
 }
 
