@@ -1,15 +1,14 @@
-
 use std::{fs, io::BufReader, path::{Path, PathBuf}, process::{Command, Stdio}, thread};
 use std::io::BufRead;
+use cargo_metadata::Message;
 use chrono::Local;
 use regex::Regex;
 
-use sp1_helper::build_program;
-
 fn main() {
+    
     println!("Hello, world!");
-    build_program("../program");
-    build_test("../program");
+    sp1_helper::build_program("../program");
+    // build_test("../program");
 }
 
 pub fn build_test(path: &str) {
@@ -17,14 +16,13 @@ pub fn build_test(path: &str) {
 
     // Tell cargo to rerun the script only if program/{src, Cargo.toml, Cargo.lock} changes
     // Ref: https://doc.rust-lang.org/nightly/cargo/reference/build-scripts.html#rerun-if-changed
-    // let dirs = vec![
-    //     program_dir.join("src"),
-    //     program_dir.join("Cargo.toml"),
-    //     program_dir.join("Cargo.lock"),
-    // ];
-    // for dir in dirs {
-    //     println!("cargo:rerun-if-changed={}", dir.display());
-    // }
+    let dirs = vec![
+        program_dir.join("Cargo.toml"),
+        program_dir.join("Cargo.lock"),
+    ];
+    for dir in dirs {
+        println!("cargo:rerun-if-changed={}", dir.display());
+    }
 
     // Print a message so the user knows that their program was built. Cargo caches warnings emitted
     // from build scripts, so we'll print the date/time when the program was built.
@@ -36,15 +34,13 @@ pub fn build_test(path: &str) {
         .as_ref()
         .map(|p| p.name.as_str())
         .unwrap_or("Program");
-
-    execute_build_cmd(&program_dir)
-        .unwrap_or_else(|_| panic!("Failed to build `{}`.", root_package_name));
-    
     println!(
-        "cargo::warning={} built at {}",
+        "cargo:warning={} built at {}",
         root_package_name,
         current_datetime()
     );
+
+    execute_build_cmd(&program_dir).unwrap();
 }
 
 fn current_datetime() -> String {
@@ -64,11 +60,24 @@ fn execute_build_cmd(
     let root_package = metadata.root_package();
     let root_package_name = root_package.as_ref().map(|p| &p.name);
 
+    // println!("metadata: {:?}", metadata);
+    println!("root_package: {:?}", root_package_name);
     
     let build_target = "riscv32im-succinct-zkvm-elf";
+    let rust_flags = [
+            "-C",
+            "passes=loweratomic",
+            "-C",
+            "link-arg=-Ttext=0x00200800",
+            "-C",
+            "panic=abort",
+        ];
+
     let mut cmd = Command::new("cargo");
     cmd.current_dir(program_dir)
         .env("RUSTUP_TOOLCHAIN", "succinct")
+        .env("CARGO_MANIFEST_DIR", program_dir)
+        .env("CARGO_ENCODED_RUSTFLAGS", rust_flags.join("\x1f"))
         .args([
             "test",
             "--release",
@@ -77,16 +86,14 @@ fn execute_build_cmd(
             "--locked",
             "--no-run",
         ])
-        .env("CARGO_MANIFEST_DIR", program_dir)
-        .env_remove("RUSTC")
         .stdout(Stdio::piped())
         .stderr(Stdio::piped());
     let mut child = cmd.spawn()?;
 
     let stdout = BufReader::new(child.stdout.take().unwrap());
     let stderr = BufReader::new(child.stderr.take().unwrap());
-    
-    
+
+
     let elf_paths = stderr
         .lines()
         .filter(|line| {
@@ -119,7 +126,6 @@ fn execute_build_cmd(
         src_elf_path, dest_elf_path
     );
 
-
     // Pipe stdout and stderr to the parent process with [sp1] prefix
     let stdout_handle = thread::spawn(move || {
         stdout.lines().for_each(|line| {
@@ -127,15 +133,21 @@ fn execute_build_cmd(
         });
     });
 
+
     // stderr.lines().for_each(|line| {
-    //     eprintln!("[sp1-err] {}", line.unwrap());
+    //     let line = line.unwrap();
+    //     if line.contains("Executable unittests") {
+    //         let ep = extract_path( &line);
+    //         println!("ep: {:?}", ep);
+    //     }
+    //     eprintln!("[sp1-err] {}", line);
     // });
-    // println!("stderr last {:?}", stderr.lines().last().unwrap().unwrap());
 
     stdout_handle.join().unwrap();
 
     child.wait()
 }
+
 
 fn extract_path(line: &str) -> Option<PathBuf> {
     let re = Regex::new(r"\(([^)]+)\)").unwrap();

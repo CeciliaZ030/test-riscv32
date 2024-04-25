@@ -17,7 +17,7 @@ extern crate test;
 fn main() {
     // Generate proof.
     let mut stdin = SP1Stdin::new();
-    stdin.write::<u32>(&GuestInput::default());
+    stdin.write::<GuestInput>(&GuestInput::default());
 
     let mut stdint = SP1Stdin::new();
     stdint.write::<Vec<String>>(&Vec::new());
