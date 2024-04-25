@@ -24,15 +24,12 @@ fn testt() {
         "succinct"
     )
     .rust_flags(&[
-        "-C",
         "passes=loweratomic",
-        "-C",
         "link-arg=-Ttext=0x00200800",
-        "-C",
         "panic=abort",
     ])
     .custom_args(&["--ignore-rust-version"]);
-    let cmd = builder.build_command("release", None);
+    let cmd = builder.test_command("release", None);
     println!("\n{:?}", cmd);
 }
 

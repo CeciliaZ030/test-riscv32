@@ -42,9 +42,6 @@ pub fn parse_metadata(path: &str) -> Metadata {
     metadata_cmd.manifest_path(manifest).exec().unwrap()
 }
 
-pub fn format_flags(flag: &str, items: &Vec<String>) -> Vec<String> {
-    items.iter().flat_map(|i| vec![flag.to_owned(), i.to_owned()]).collect()
-}
 
 pub fn build_test(path: &str) {
     let program_dir = std::path::Path::new(path);
