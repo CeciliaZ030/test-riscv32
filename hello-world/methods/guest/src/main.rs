@@ -20,6 +20,7 @@ fn main() {
     env::commit(&input);
 }
 
+// use k256 as risc0_k256;
 
 #[cfg(test)]
 mod test {
@@ -28,7 +29,7 @@ mod test {
     fn fib() {
         let mut a = 1;
         let mut b = 1;
-        for _ in 0..12 {
+        for _ in 0..10 {
             let c = a + b;
             a = b;
             b = c;
@@ -36,3 +37,4 @@ mod test {
         assert_eq!(b, 144);
     }
 }
+

@@ -10,3 +10,4 @@ cargo_metadata = "0.18.1"
 chrono = { version = "0.4.34", default-features = false, features = ["clock"] }
 regex = "1.5.4"
 sp1-helper = { git = "https://github.com/succinctlabs/sp1.git" }
+anyhow = "1.0.44"

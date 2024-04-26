@@ -3,10 +3,12 @@ use std::io::BufRead;
 use cargo_metadata::Message;
 use chrono::Local;
 use regex::Regex;
+use std::env;
 
 fn main() {
     
     println!("Hello, world!");
+    println!("env {:?}",  env::var_os("OUT_DIR"));
     sp1_helper::build_program("../cunt");
     build_test("../cunt");
 }
@@ -66,6 +68,7 @@ fn execute_build_cmd(
     let build_target = "riscv32im-succinct-zkvm-elf";
     let rust_flags = [
             "-C",
+            
             "passes=loweratomic",
             "-C",
             "link-arg=-Ttext=0x00200800",

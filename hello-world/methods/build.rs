@@ -27,6 +27,8 @@ fn embed_tests() -> Vec<GuestListEntry> {
     let out_dir_env = env::var_os("OUT_DIR").unwrap();
     let out_dir = Path::new(&out_dir_env); // $ROOT/target/$profile/build/$crate/out
                                            // Determine the output directory, in the target folder, for the guest binary.
+    
+    
     let guest_dir = out_dir
         .parent() // out
         .unwrap()
@@ -37,6 +39,8 @@ fn embed_tests() -> Vec<GuestListEntry> {
         .parent() // $profile
         .unwrap()
         .join("riscv-guest-test");
+
+    let guest_dir = PathBuf::from("/home/ubuntu/xxx/hello-world/methods/guest");
 
     // Read the cargo metadata for info from `[package.metadata.risc0]`.
     let pkg = get_package(env::var("CARGO_MANIFEST_DIR").unwrap());
@@ -56,13 +60,13 @@ fn embed_tests() -> Vec<GuestListEntry> {
         
         println!("{:?} ----- {:?}", guest_pkg, guest_dir);
 
-        let methods = guest_methods(guest_pkg, &guest_dir);
-        for method in methods {
-            println!("---------------- {}, {:?}", method.name, method.image_id);
+        let bins = guest_binary(guest_pkg, &guest_dir);
+        for bin in bins {
+            println!("---------------- {}, {:?}", bin.name, bin.image_id);
             methods_file
-                .write_all(method.codegen_consts().as_bytes())
+                .write_all(bin.codegen_consts().as_bytes())
                 .unwrap();
-            guest_list.push(method);
+            guest_list.push(bin);
         }
     }
     println!("cargo::rerun-if-changed={}", methods_path.display());
@@ -117,7 +121,7 @@ pub fn get_package(manifest_dir: impl AsRef<Path>) -> Package {
 }
 
 /// Returns all methods associated with the given guest crate.
-fn guest_methods(pkg: &Package, target_dir: impl AsRef<Path>) -> Vec<GuestListEntry> {
+fn guest_binary(pkg: &Package, target_dir: impl AsRef<Path>) -> Vec<GuestListEntry> {
     let profile = if is_debug() { "debug" } else { "release" };
     pkg.targets
         .iter()
