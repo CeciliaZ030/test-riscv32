@@ -4,6 +4,10 @@ version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "zzz"
+path = "src/mainn.rs"
+
 
 [dependencies]
 cargo_metadata = "0.18.1"
@@ -11,3 +15,4 @@ chrono = { version = "0.4.34", default-features = false, features = ["clock"] }
 regex = "1.5.4"
 sp1-helper = { git = "https://github.com/succinctlabs/sp1.git" }
 anyhow = "1.0.44"
+dirs = "5.0"

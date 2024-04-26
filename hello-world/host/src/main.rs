@@ -2,7 +2,7 @@
 // The ELF is used for proving and the ID is used for verification.
 use methods::{
     HELLO_GUEST_ELF, HELLO_GUEST_ID, HELLO_GUEST_PATH,
-    HELLO_GUEST_TEST_ELF
+    // HELLO_GUEST_TEST_ELF
 };
 use risc0_zkvm::{default_prover, ExecutorEnv};
 

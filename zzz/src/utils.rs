@@ -330,6 +330,7 @@ impl GuestBuilder {
         // `--{profile} {bin} --target {target} --locked -Z {z_flags}`
         if profile != "debug" {
             // error: unexpected argument '--debug' found; tip: `--debug` is the default
+            args.push(format!("--{}", profile));
         }
         args.extend(vec![
             "--target".to_string(),
@@ -346,9 +347,9 @@ impl GuestBuilder {
         }
 
         // Construct command from the toolchain-specific cargo
-        let mut cmd = Command::new(cargo);
+        let mut cmd = Command::new("cargo");
         // Clear unwanted env vars
-        self.sanitize(&mut cmd, false);
+        self.sanitize(&mut cmd, true);
         cmd.current_dir(meta.target_directory.parent().unwrap());
 
         // Set Rustc compiler path and flags

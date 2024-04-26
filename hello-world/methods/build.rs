@@ -13,13 +13,14 @@ use regex::Regex;
 use cargo_metadata::{Message, MetadataCommand, Package};
 
 mod utils;
-use risc0_build::cargo_command;
+// use risc0_build::cargo_command;
 use utils::*;
+
 
 fn main() {
     println!("Embedding methods");
-    risc0_build::embed_methods();
-    embed_tests();
+    // risc0_build::embed_methods();
+    zzz::risc0();
 }
 
 fn embed_tests() -> Vec<GuestListEntry> {
@@ -143,6 +144,7 @@ fn guest_binary(pkg: &Package, target_dir: impl AsRef<Path>) -> Vec<GuestListEnt
         .collect()
 }
 
+
 // Builds a package that targets the riscv guest into the specified target
 // directory.
 fn build_guest_package<P>(pkg: &mut Package, target_dir: P, runtime_lib: Option<&str>)
@@ -164,6 +166,9 @@ where
         cmd.args(["--release"]);
     }
     println!("Building guest package:  {:?}", cmd);
+    for (key, value) in env::vars() {
+        println!("{key}: {value}");
+    }
 
     let mut child = cmd
         .stderr(Stdio::piped())
