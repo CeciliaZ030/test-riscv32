@@ -1,0 +1,980 @@
+[serde 1.0.198] cargo:rerun-if-changed=build.rs
+[serde 1.0.198] cargo:rerun-if-changed=build.rs
+[semver 1.0.22] cargo:rerun-if-changed=build.rs
+[serde_json 1.0.116] cargo:rerun-if-changed=build.rs
+[serde_json 1.0.116] cargo:rustc-cfg=limb_width_64
+[paste 1.0.14] cargo:rerun-if-changed=build.rs
+[thiserror 1.0.59] cargo:rerun-if-changed=build/probe.rs
+[syn 1.0.109] cargo:rustc-cfg=syn_disable_nightly_tests
+[anyhow 1.0.82] cargo:rerun-if-changed=build/probe.rs
+[proc-macro2 1.0.81] cargo:rustc-cfg=no_literal_byte_character
+[proc-macro2 1.0.81] cargo:rustc-cfg=no_literal_c_string
+[proc-macro2 1.0.81] cargo:rerun-if-changed=build/probe.rs
+[thiserror 1.0.59] cargo:rerun-if-env-changed=RUSTC_BOOTSTRAP
+[libc 0.2.153] cargo:rerun-if-changed=build.rs
+[proc-macro2 1.0.81] cargo:rustc-cfg=wrap_proc_macro
+[proc-macro2 1.0.81] cargo:rerun-if-env-changed=RUSTC_BOOTSTRAP
+[camino 1.1.6] cargo:rustc-cfg=path_buf_capacity
+[camino 1.1.6] cargo:rustc-cfg=shrink_to
+[camino 1.1.6] cargo:rustc-cfg=try_reserve_2
+[camino 1.1.6] cargo:rustc-cfg=path_buf_deref_mut
+[anyhow 1.0.82] cargo:rerun-if-env-changed=RUSTC_BOOTSTRAP
+[libc 0.2.153] cargo:rustc-cfg=freebsd11
+[anyhow 1.0.82] cargo:rustc-cfg=std_backtrace
+[libc 0.2.153] cargo:rustc-cfg=libc_priv_mod_use
+[libc 0.2.153] cargo:rustc-cfg=libc_union
+[libc 0.2.153] cargo:rustc-cfg=libc_const_size_of
+[libc 0.2.153] cargo:rustc-cfg=libc_align
+[libc 0.2.153] cargo:rustc-cfg=libc_int128
+[libc 0.2.153] cargo:rustc-cfg=libc_core_cvoid
+[libc 0.2.153] cargo:rustc-cfg=libc_packedN
+[libc 0.2.153] cargo:rustc-cfg=libc_cfg_target_vendor
+[libc 0.2.153] cargo:rustc-cfg=libc_non_exhaustive
+[libc 0.2.153] cargo:rustc-cfg=libc_long_array
+[libc 0.2.153] cargo:rustc-cfg=libc_ptr_addr_of
+[libc 0.2.153] cargo:rustc-cfg=libc_underscore_const_names
+[libc 0.2.153] cargo:rustc-cfg=libc_const_extern_fn
+[libc 0.2.153] cargo:rerun-if-changed=build.rs
+[rustix 0.38.33] cargo:rerun-if-changed=build.rs
+[libc 0.2.153] cargo:rustc-cfg=freebsd11
+[libc 0.2.153] cargo:rustc-cfg=libc_priv_mod_use
+[libc 0.2.153] cargo:rustc-cfg=libc_union
+[libc 0.2.153] cargo:rustc-cfg=libc_const_size_of
+[libc 0.2.153] cargo:rustc-cfg=libc_align
+[libc 0.2.153] cargo:rustc-cfg=libc_int128
+[libc 0.2.153] cargo:rustc-cfg=libc_core_cvoid
+[libc 0.2.153] cargo:rustc-cfg=libc_packedN
+[libc 0.2.153] cargo:rustc-cfg=libc_cfg_target_vendor
+[libc 0.2.153] cargo:rustc-cfg=libc_non_exhaustive
+[libc 0.2.153] cargo:rustc-cfg=libc_long_array
+[libc 0.2.153] cargo:rustc-cfg=libc_ptr_addr_of
+[libc 0.2.153] cargo:rustc-cfg=libc_underscore_const_names
+[libc 0.2.153] cargo:rustc-cfg=libc_const_extern_fn
+[rustix 0.38.33] cargo:rustc-cfg=static_assertions
+[rustix 0.38.33] cargo:rustc-cfg=linux_raw
+[rustix 0.38.33] cargo:rustc-cfg=linux_like
+[rustix 0.38.33] cargo:rustc-cfg=linux_kernel
+[rustix 0.38.33] cargo:rerun-if-env-changed=CARGO_CFG_RUSTIX_USE_EXPERIMENTAL_ASM
+[rustix 0.38.33] cargo:rerun-if-env-changed=CARGO_CFG_RUSTIX_USE_LIBC
+[rustix 0.38.33] cargo:rerun-if-env-changed=CARGO_FEATURE_USE_LIBC
+[rustix 0.38.33] cargo:rerun-if-env-changed=CARGO_FEATURE_RUSTC_DEP_OF_STD
+[rustix 0.38.33] cargo:rerun-if-env-changed=CARGO_CFG_MIRI
+[anyhow 1.0.82] cargo:rerun-if-changed=build/probe.rs
+[anyhow 1.0.82] cargo:rerun-if-env-changed=RUSTC_BOOTSTRAP
+[anyhow 1.0.82] cargo:rustc-cfg=std_backtrace
+[generic-array 0.14.7] cargo:rustc-cfg=relaxed_coherence
+[ahash 0.8.11] cargo:rerun-if-changed=build.rs
+[generic-array 0.14.7] cargo:rustc-cfg=relaxed_coherence
+[typenum 1.17.0] cargo:rerun-if-changed=build/main.rs
+[ahash 0.8.11] cargo:rustc-cfg=feature="folded_multiply"
+[typenum 1.17.0] cargo:rerun-if-changed=build/main.rs
+[httparse 1.8.0] cargo:rustc-cfg=httparse_simd
+[num-traits 0.2.18] cargo:rustc-cfg=has_to_int_unchecked
+[num-bigint 0.4.4] cargo:rustc-cfg=u64_digit
+[num-traits 0.2.18] cargo:rustc-cfg=has_to_int_unchecked
+[num-bigint 0.4.4] cargo:rustc-cfg=u64_digit
+[num-traits 0.2.18] cargo:rustc-cfg=has_reverse_bits
+[prettyplease 0.2.19] cargo:rerun-if-changed=build.rs
+[prettyplease 0.2.19] cargo:VERSION=0.2.19
+[num-traits 0.2.18] cargo:rustc-cfg=has_reverse_bits
+[num-traits 0.2.18] cargo:rustc-cfg=has_leading_trailing_ones
+[num-traits 0.2.18] cargo:rustc-cfg=has_leading_trailing_ones
+[num-traits 0.2.18] cargo:rustc-cfg=has_div_euclid
+[num-traits 0.2.18] cargo:rustc-cfg=has_div_euclid
+[num-bigint 0.4.4] cargo:rustc-cfg=has_try_from
+[num-traits 0.2.18] cargo:rustc-cfg=has_is_subnormal
+[num-bigint 0.4.4] cargo:rustc-cfg=has_try_from
+[num-traits 0.2.18] cargo:rustc-cfg=has_copysign
+[num-traits 0.2.18] cargo:rustc-cfg=has_total_cmp
+[num-bigint 0.4.4] cargo:rustc-cfg=use_addcarry
+[num-bigint 0.4.4] cargo:rerun-if-changed=build.rs
+[num-bigint 0.4.4] cargo:rustc-cfg=use_addcarry
+[num-bigint 0.4.4] cargo:rerun-if-changed=build.rs
+[num-traits 0.2.18] cargo:rustc-cfg=has_is_subnormal
+[num-traits 0.2.18] cargo:rustc-cfg=has_int_to_from_bytes
+[num-traits 0.2.18] cargo:rustc-cfg=has_total_cmp
+[num-traits 0.2.18] cargo:rustc-cfg=has_float_to_from_bytes
+[num-traits 0.2.18] cargo:rerun-if-changed=build.rs
+[num-traits 0.2.18] cargo:rustc-cfg=has_int_to_from_bytes
+[num-traits 0.2.18] cargo:rustc-cfg=has_float_to_from_bytes
+[num-traits 0.2.18] cargo:rerun-if-changed=build.rs
+[serde_json 1.0.116] cargo:rerun-if-changed=build.rs
+[serde_json 1.0.116] cargo:rustc-cfg=limb_width_64
+[rustix 0.38.33] cargo:rerun-if-changed=build.rs
+[thiserror 1.0.59] cargo:rerun-if-changed=build/probe.rs
+[rustix 0.38.33] cargo:rustc-cfg=static_assertions
+[rustix 0.38.33] cargo:rustc-cfg=linux_raw
+[rustix 0.38.33] cargo:rustc-cfg=linux_like
+[rustix 0.38.33] cargo:rustc-cfg=linux_kernel
+[rustix 0.38.33] cargo:rerun-if-env-changed=CARGO_CFG_RUSTIX_USE_EXPERIMENTAL_ASM
+[rustix 0.38.33] cargo:rerun-if-env-changed=CARGO_CFG_RUSTIX_USE_LIBC
+[rustix 0.38.33] cargo:rerun-if-env-changed=CARGO_FEATURE_USE_LIBC
+[rustix 0.38.33] cargo:rerun-if-env-changed=CARGO_FEATURE_RUSTC_DEP_OF_STD
+[rustix 0.38.33] cargo:rerun-if-env-changed=CARGO_CFG_MIRI
+[thiserror 1.0.59] cargo:rerun-if-env-changed=RUSTC_BOOTSTRAP
+[semver 1.0.22] cargo:rerun-if-changed=build.rs
+[protobuf-src 1.1.0+21.5] running: cd "/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/build" && CC="cc" CFLAGS="-O0 -ffunction-sections -fdata-sections -fPIC -m64" CXX="c++" CXXFLAGS="-O0 -ffunction-sections -fdata-sections -fPIC -m64" "sh" "-c" "exec \"$0\" \"$@\"" "/home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/configure" "--prefix=/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install" "--disable-shared" "--enable-static" "--disable-maintainer-mode"
+[ring 0.17.8] cargo:rerun-if-env-changed=RING_PREGENERATE_ASM
+[ring 0.17.8] cargo:rustc-env=RING_CORE_PREFIX=ring_core_0_17_8_
+[ring 0.17.8] OPT_LEVEL = Some("3")
+[ring 0.17.8] TARGET = Some("x86_64-unknown-linux-gnu")
+[ring 0.17.8] HOST = Some("x86_64-unknown-linux-gnu")
+[ring 0.17.8] cargo:rerun-if-env-changed=CC_x86_64-unknown-linux-gnu
+[ring 0.17.8] CC_x86_64-unknown-linux-gnu = None
+[ring 0.17.8] cargo:rerun-if-env-changed=CC_x86_64_unknown_linux_gnu
+[ring 0.17.8] CC_x86_64_unknown_linux_gnu = None
+[ring 0.17.8] cargo:rerun-if-env-changed=HOST_CC
+[ring 0.17.8] HOST_CC = None
+[ring 0.17.8] cargo:rerun-if-env-changed=CC
+[ring 0.17.8] CC = None
+[ring 0.17.8] cargo:rerun-if-env-changed=CC_ENABLE_DEBUG_OUTPUT
+[ring 0.17.8] cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+[ring 0.17.8] CRATE_CC_NO_DEFAULTS = None
+[ring 0.17.8] DEBUG = Some("true")
+[ring 0.17.8] CARGO_CFG_TARGET_FEATURE = Some("fxsr,sse,sse2")
+[ring 0.17.8] cargo:rerun-if-env-changed=CFLAGS_x86_64-unknown-linux-gnu
+[ring 0.17.8] CFLAGS_x86_64-unknown-linux-gnu = None
+[ring 0.17.8] cargo:rerun-if-env-changed=CFLAGS_x86_64_unknown_linux_gnu
+[ring 0.17.8] CFLAGS_x86_64_unknown_linux_gnu = None
+[ring 0.17.8] cargo:rerun-if-env-changed=HOST_CFLAGS
+[ring 0.17.8] HOST_CFLAGS = None
+[ring 0.17.8] cargo:rerun-if-env-changed=CFLAGS
+[ring 0.17.8] CFLAGS = None
+[protobuf-src 1.1.0+21.5] checking whether to enable maintainer-specific portions of Makefiles... no
+[protobuf-src 1.1.0+21.5] checking build system type... x86_64-pc-linux-gnu
+[protobuf-src 1.1.0+21.5] checking host system type... x86_64-pc-linux-gnu
+[protobuf-src 1.1.0+21.5] checking target system type... x86_64-pc-linux-gnu
+[protobuf-src 1.1.0+21.5] checking for a BSD-compatible install... /usr/bin/install -c
+[protobuf-src 1.1.0+21.5] checking whether build environment is sane... yes
+[protobuf-src 1.1.0+21.5] checking for a race-free mkdir -p... /usr/bin/mkdir -p
+[protobuf-src 1.1.0+21.5] checking for gawk... gawk
+[protobuf-src 1.1.0+21.5] checking whether make sets $(MAKE)... yes
+[protobuf-src 1.1.0+21.5] checking whether make supports nested variables... yes
+[protobuf-src 1.1.0+21.5] checking whether UID '1000' is supported by ustar format... yes
+[protobuf-src 1.1.0+21.5] checking whether GID '1000' is supported by ustar format... yes
+[protobuf-src 1.1.0+21.5] checking how to create a ustar tar archive... gnutar
+[protobuf-src 1.1.0+21.5] checking whether make supports nested variables... (cached) yes
+[protobuf-src 1.1.0+21.5] checking for gcc... cc
+[protobuf-src 1.1.0+21.5] checking whether the C compiler works... yes
+[protobuf-src 1.1.0+21.5] checking for C compiler default output file name... a.out
+[protobuf-src 1.1.0+21.5] checking for suffix of executables... 
+[protobuf-src 1.1.0+21.5] checking whether we are cross compiling... no
+[protobuf-src 1.1.0+21.5] checking for suffix of object files... o
+[protobuf-src 1.1.0+21.5] checking whether the compiler supports GNU C... yes
+[protobuf-src 1.1.0+21.5] checking whether cc accepts -g... yes
+[protobuf-src 1.1.0+21.5] checking for cc option to enable C11 features... none needed
+[protobuf-src 1.1.0+21.5] checking whether cc understands -c and -o together... yes
+[protobuf-src 1.1.0+21.5] checking whether make supports the include directive... yes (GNU style)
+[protobuf-src 1.1.0+21.5] checking dependency style of cc... gcc3
+[protobuf-src 1.1.0+21.5] checking whether the compiler supports GNU C++... yes
+[protobuf-src 1.1.0+21.5] checking whether c++ accepts -g... yes
+[protobuf-src 1.1.0+21.5] checking for c++ option to enable C++11 features... none needed
+[protobuf-src 1.1.0+21.5] checking dependency style of c++... gcc3
+[protobuf-src 1.1.0+21.5] checking how to run the C preprocessor... cc -E
+[protobuf-src 1.1.0+21.5] checking for gcc... gcc
+[protobuf-src 1.1.0+21.5] checking whether the compiler supports GNU C... (cached) yes
+[protobuf-src 1.1.0+21.5] checking whether gcc accepts -g... yes
+[protobuf-src 1.1.0+21.5] checking for gcc option to enable C11 features... (cached) none needed
+[protobuf-src 1.1.0+21.5] checking whether gcc understands -c and -o together... (cached) yes
+[protobuf-src 1.1.0+21.5] checking dependency style of gcc... (cached) gcc3
+[protobuf-src 1.1.0+21.5] checking how to run the C preprocessor... gcc -E
+[protobuf-src 1.1.0+21.5] checking how to run the C++ preprocessor... c++ -E
+[protobuf-src 1.1.0+21.5] checking for g++... g++
+[protobuf-src 1.1.0+21.5] checking whether the compiler supports GNU C++... (cached) yes
+[protobuf-src 1.1.0+21.5] checking whether g++ accepts -g... yes
+[protobuf-src 1.1.0+21.5] checking for g++ option to enable C++11 features... (cached) none needed
+[protobuf-src 1.1.0+21.5] checking dependency style of g++... (cached) gcc3
+[protobuf-src 1.1.0+21.5] checking how to run the C++ preprocessor... g++ -E
+[protobuf-src 1.1.0+21.5] checking for stdio.h... yes
+[protobuf-src 1.1.0+21.5] checking for stdlib.h... yes
+[protobuf-src 1.1.0+21.5] checking for string.h... yes
+[protobuf-src 1.1.0+21.5] checking for inttypes.h... yes
+[protobuf-src 1.1.0+21.5] checking for stdint.h... yes
+[protobuf-src 1.1.0+21.5] checking for strings.h... yes
+[protobuf-src 1.1.0+21.5] checking for sys/stat.h... yes
+[protobuf-src 1.1.0+21.5] checking for sys/types.h... yes
+[protobuf-src 1.1.0+21.5] checking for unistd.h... yes
+[protobuf-src 1.1.0+21.5] checking for wchar.h... yes
+[protobuf-src 1.1.0+21.5] checking for minix/config.h... no
+[protobuf-src 1.1.0+21.5] checking whether it is safe to define __EXTENSIONS__... yes
+[protobuf-src 1.1.0+21.5] checking whether _XOPEN_SOURCE should be defined... no
+[protobuf-src 1.1.0+21.5] checking for ar... ar
+[protobuf-src 1.1.0+21.5] checking the archiver (ar) interface... ar
+[protobuf-src 1.1.0+21.5] checking C++ compiler flags...... use user-supplied: -O0 -ffunction-sections -fdata-sections -fPIC -m64
+[protobuf-src 1.1.0+21.5] checking for c++ options needed to detect all undeclared functions... none needed
+[protobuf-src 1.1.0+21.5] checking whether __SUNPRO_CC is declared... no
+[protobuf-src 1.1.0+21.5] checking how to print strings... printf
+[protobuf-src 1.1.0+21.5] checking for a sed that does not truncate output... /usr/bin/sed
+[protobuf-src 1.1.0+21.5] checking for grep that handles long lines and -e... /usr/bin/grep
+[protobuf-src 1.1.0+21.5] checking for egrep... /usr/bin/grep -E
+[protobuf-src 1.1.0+21.5] checking for fgrep... /usr/bin/grep -F
+[protobuf-src 1.1.0+21.5] checking for ld used by cc... /usr/bin/ld
+[protobuf-src 1.1.0+21.5] checking if the linker (/usr/bin/ld) is GNU ld... yes
+[protobuf-src 1.1.0+21.5] checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+[protobuf-src 1.1.0+21.5] checking the name lister (/usr/bin/nm -B) interface... BSD nm
+[protobuf-src 1.1.0+21.5] checking whether ln -s works... yes
+[protobuf-src 1.1.0+21.5] checking the maximum length of command line arguments... 1572864
+[protobuf-src 1.1.0+21.5] checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+[protobuf-src 1.1.0+21.5] checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+[protobuf-src 1.1.0+21.5] checking for /usr/bin/ld option to reload object files... -r
+[protobuf-src 1.1.0+21.5] checking for file... file
+[protobuf-src 1.1.0+21.5] checking for objdump... objdump
+[protobuf-src 1.1.0+21.5] checking how to recognize dependent libraries... pass_all
+[protobuf-src 1.1.0+21.5] checking for dlltool... no
+[protobuf-src 1.1.0+21.5] checking how to associate runtime and link libraries... printf %s\n
+[protobuf-src 1.1.0+21.5] checking for archiver @FILE support... @
+[protobuf-src 1.1.0+21.5] checking for strip... strip
+[protobuf-src 1.1.0+21.5] checking for ranlib... ranlib
+[protobuf-src 1.1.0+21.5] checking command to parse /usr/bin/nm -B output from cc object... ok
+[protobuf-src 1.1.0+21.5] checking for sysroot... no
+[protobuf-src 1.1.0+21.5] checking for a working dd... /usr/bin/dd
+[protobuf-src 1.1.0+21.5] checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+[protobuf-src 1.1.0+21.5] checking for mt... mt
+[protobuf-src 1.1.0+21.5] checking if mt is a manifest tool... no
+[protobuf-src 1.1.0+21.5] checking for dlfcn.h... yes
+[protobuf-src 1.1.0+21.5] checking for objdir... .libs
+[protobuf-src 1.1.0+21.5] checking if cc supports -fno-rtti -fno-exceptions... no
+[protobuf-src 1.1.0+21.5] checking for cc option to produce PIC... -fPIC -DPIC
+[protobuf-src 1.1.0+21.5] checking if cc PIC flag -fPIC -DPIC works... yes
+[protobuf-src 1.1.0+21.5] checking if cc static flag -static works... yes
+[protobuf-src 1.1.0+21.5] checking if cc supports -c -o file.o... yes
+[protobuf-src 1.1.0+21.5] checking if cc supports -c -o file.o... (cached) yes
+[protobuf-src 1.1.0+21.5] checking whether the cc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+[protobuf-src 1.1.0+21.5] checking dynamic linker characteristics... GNU/Linux ld.so
+[protobuf-src 1.1.0+21.5] checking how to hardcode library paths into programs... immediate
+[protobuf-src 1.1.0+21.5] checking whether stripping libraries is possible... yes
+[protobuf-src 1.1.0+21.5] checking if libtool supports shared libraries... yes
+[protobuf-src 1.1.0+21.5] checking whether to build shared libraries... no
+[protobuf-src 1.1.0+21.5] checking whether to build static libraries... yes
+[protobuf-src 1.1.0+21.5] checking how to run the C++ preprocessor... c++ -E
+[protobuf-src 1.1.0+21.5] checking for ld used by c++... /usr/bin/ld -m elf_x86_64
+[protobuf-src 1.1.0+21.5] checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+[protobuf-src 1.1.0+21.5] checking whether the c++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+[protobuf-src 1.1.0+21.5] checking for c++ option to produce PIC... -fPIC -DPIC
+[protobuf-src 1.1.0+21.5] checking if c++ PIC flag -fPIC -DPIC works... yes
+[protobuf-src 1.1.0+21.5] checking if c++ static flag -static works... yes
+[protobuf-src 1.1.0+21.5] checking if c++ supports -c -o file.o... yes
+[protobuf-src 1.1.0+21.5] checking if c++ supports -c -o file.o... (cached) yes
+[protobuf-src 1.1.0+21.5] checking whether the c++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+[protobuf-src 1.1.0+21.5] checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+[protobuf-src 1.1.0+21.5] checking how to hardcode library paths into programs... immediate
+[protobuf-src 1.1.0+21.5] checking whether the linker supports version scripts... yes
+[protobuf-src 1.1.0+21.5] checking for egrep... (cached) /usr/bin/grep -E
+[protobuf-src 1.1.0+21.5] checking for fcntl.h... yes
+[protobuf-src 1.1.0+21.5] checking for inttypes.h... (cached) yes
+[protobuf-src 1.1.0+21.5] checking for limits.h... yes
+[protobuf-src 1.1.0+21.5] checking for stdlib.h... (cached) yes
+[protobuf-src 1.1.0+21.5] checking for unistd.h... (cached) yes
+[protobuf-src 1.1.0+21.5] checking for working memcmp... yes
+[protobuf-src 1.1.0+21.5] checking for working strtod... yes
+[protobuf-src 1.1.0+21.5] checking for ftruncate... yes
+[protobuf-src 1.1.0+21.5] checking for memset... yes
+[protobuf-src 1.1.0+21.5] checking for mkdir... yes
+[protobuf-src 1.1.0+21.5] checking for strchr... yes
+[protobuf-src 1.1.0+21.5] checking for strerror... yes
+[protobuf-src 1.1.0+21.5] checking for strtol... yes
+[protobuf-src 1.1.0+21.5] checking zlib version... ok (1.2.0.4 or later)
+[protobuf-src 1.1.0+21.5] checking for library containing zlibVersion... -lz
+[protobuf-src 1.1.0+21.5] checking whether c++ supports C++11 features by default... yes
+[protobuf-src 1.1.0+21.5] checking whether -latomic is needed... no
+[protobuf-src 1.1.0+21.5] checking whether cc is Clang... no
+[protobuf-src 1.1.0+21.5] checking whether pthreads work with "-pthread" and "-lpthread"... yes
+[protobuf-src 1.1.0+21.5] checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+[protobuf-src 1.1.0+21.5] checking whether more special flags are required for pthreads... no
+[protobuf-src 1.1.0+21.5] checking for PTHREAD_PRIO_INHERIT... yes
+[protobuf-src 1.1.0+21.5] checking the location of hash_map... <unordered_map>
+[protobuf-src 1.1.0+21.5] checking whether -llog is needed... no
+[protobuf-src 1.1.0+21.5] checking that generated files are newer than configure... done
+[protobuf-src 1.1.0+21.5] configure: creating ./config.status
+[protobuf-src 1.1.0+21.5] config.status: creating Makefile
+[protobuf-src 1.1.0+21.5] config.status: creating src/Makefile
+[protobuf-src 1.1.0+21.5] config.status: creating benchmarks/Makefile
+[protobuf-src 1.1.0+21.5] config.status: creating conformance/Makefile
+[protobuf-src 1.1.0+21.5] config.status: creating protobuf.pc
+[protobuf-src 1.1.0+21.5] config.status: creating protobuf-lite.pc
+[protobuf-src 1.1.0+21.5] config.status: creating config.h
+[protobuf-src 1.1.0+21.5] config.status: executing depfiles commands
+[ring 0.17.8] cargo:rustc-link-lib=static=ring_core_0_17_8_
+[ring 0.17.8] OPT_LEVEL = Some("3")
+[ring 0.17.8] TARGET = Some("x86_64-unknown-linux-gnu")
+[ring 0.17.8] HOST = Some("x86_64-unknown-linux-gnu")
+[ring 0.17.8] cargo:rerun-if-env-changed=CC_x86_64-unknown-linux-gnu
+[ring 0.17.8] CC_x86_64-unknown-linux-gnu = None
+[ring 0.17.8] cargo:rerun-if-env-changed=CC_x86_64_unknown_linux_gnu
+[ring 0.17.8] CC_x86_64_unknown_linux_gnu = None
+[ring 0.17.8] cargo:rerun-if-env-changed=HOST_CC
+[ring 0.17.8] HOST_CC = None
+[ring 0.17.8] cargo:rerun-if-env-changed=CC
+[ring 0.17.8] CC = None
+[ring 0.17.8] cargo:rerun-if-env-changed=CC_ENABLE_DEBUG_OUTPUT
+[ring 0.17.8] cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+[ring 0.17.8] CRATE_CC_NO_DEFAULTS = None
+[ring 0.17.8] DEBUG = Some("true")
+[ring 0.17.8] CARGO_CFG_TARGET_FEATURE = Some("fxsr,sse,sse2")
+[ring 0.17.8] cargo:rerun-if-env-changed=CFLAGS_x86_64-unknown-linux-gnu
+[ring 0.17.8] CFLAGS_x86_64-unknown-linux-gnu = None
+[ring 0.17.8] cargo:rerun-if-env-changed=CFLAGS_x86_64_unknown_linux_gnu
+[ring 0.17.8] CFLAGS_x86_64_unknown_linux_gnu = None
+[ring 0.17.8] cargo:rerun-if-env-changed=HOST_CFLAGS
+[ring 0.17.8] HOST_CFLAGS = None
+[ring 0.17.8] cargo:rerun-if-env-changed=CFLAGS
+[ring 0.17.8] CFLAGS = None
+[ring 0.17.8] cargo:rustc-link-lib=static=ring_core_0_17_8_test
+[ring 0.17.8] cargo:rustc-link-search=native=/home/ubuntu/xxx/hello-world/target/debug/build/ring-545af37555d0c04c/out
+[ring 0.17.8] cargo:rerun-if-changed=crypto/perlasm/x86nasm.pl
+[ring 0.17.8] cargo:rerun-if-changed=crypto/perlasm/x86asm.pl
+[ring 0.17.8] cargo:rerun-if-changed=crypto/perlasm/x86gas.pl
+[ring 0.17.8] cargo:rerun-if-changed=crypto/perlasm/x86_64-xlate.pl
+[ring 0.17.8] cargo:rerun-if-changed=crypto/perlasm/arm-xlate.pl
+[ring 0.17.8] cargo:rerun-if-changed=crypto/constant_time_test.c
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/aes/asm/vpaes-x86.pl
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/aes/asm/aesv8-armx.pl
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/aes/asm/vpaes-x86_64.pl
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/aes/asm/aesni-x86.pl
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/aes/asm/bsaes-armv7.pl
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/aes/asm/aesni-x86_64.pl
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/aes/aes_nohw.c
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/bn/montgomery_inv.c
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/bn/montgomery.c
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/bn/asm/x86-mont.pl
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/bn/asm/x86_64-mont.pl
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/bn/asm/armv8-mont.pl
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/bn/asm/x86_64-mont5.pl
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/bn/asm/armv4-mont.pl
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/bn/internal.h
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/sha/asm/sha256-armv4.pl
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/sha/asm/sha512-armv4.pl
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/sha/asm/sha512-x86_64.pl
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/sha/asm/sha512-armv8.pl
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/modes/asm/aesni-gcm-x86_64.pl
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/modes/asm/ghash-armv4.pl
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/modes/asm/ghash-x86.pl
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/modes/asm/ghash-x86_64.pl
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/modes/asm/aesv8-gcm-armv8.pl
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/modes/asm/ghashv8-armx.pl
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/ec/p256-nistz-table.h
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/ec/gfp_p384.c
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/ec/ecp_nistz.h
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/ec/p256.c
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/ec/ecp_nistz384.h
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/ec/p256-nistz.h
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/ec/ecp_nistz.c
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/ec/ecp_nistz384.inl
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/ec/util.h
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/ec/asm/p256-armv8-asm.pl
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/ec/asm/p256-x86_64-asm.pl
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/ec/p256-nistz.c
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/ec/p256_table.h
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/ec/gfp_p256.c
+[ring 0.17.8] cargo:rerun-if-changed=crypto/fipsmodule/ec/p256_shared.h
+[ring 0.17.8] cargo:rerun-if-changed=crypto/cpu_intel.c
+[ring 0.17.8] cargo:rerun-if-changed=crypto/limbs/limbs.inl
+[ring 0.17.8] cargo:rerun-if-changed=crypto/limbs/limbs.h
+[ring 0.17.8] cargo:rerun-if-changed=crypto/limbs/limbs.c
+[ring 0.17.8] cargo:rerun-if-changed=crypto/poly1305/poly1305_arm_asm.S
+[ring 0.17.8] cargo:rerun-if-changed=crypto/poly1305/poly1305_vec.c
+[ring 0.17.8] cargo:rerun-if-changed=crypto/poly1305/poly1305_arm.c
+[ring 0.17.8] cargo:rerun-if-changed=crypto/poly1305/poly1305.c
+[ring 0.17.8] cargo:rerun-if-changed=crypto/poly1305/internal.h
+[ring 0.17.8] cargo:rerun-if-changed=crypto/mem.c
+[ring 0.17.8] cargo:rerun-if-changed=crypto/crypto.c
+[ring 0.17.8] cargo:rerun-if-changed=crypto/chacha/asm/chacha-x86_64.pl
+[ring 0.17.8] cargo:rerun-if-changed=crypto/chacha/asm/chacha-armv8.pl
+[ring 0.17.8] cargo:rerun-if-changed=crypto/chacha/asm/chacha-armv4.pl
+[ring 0.17.8] cargo:rerun-if-changed=crypto/chacha/asm/chacha-x86.pl
+[ring 0.17.8] cargo:rerun-if-changed=crypto/curve25519/curve25519.c
+[ring 0.17.8] cargo:rerun-if-changed=crypto/curve25519/curve25519_tables.h
+[ring 0.17.8] cargo:rerun-if-changed=crypto/curve25519/curve25519_64_adx.c
+[ring 0.17.8] cargo:rerun-if-changed=crypto/curve25519/asm/x25519-asm-arm.S
+[ring 0.17.8] cargo:rerun-if-changed=crypto/curve25519/internal.h
+[ring 0.17.8] cargo:rerun-if-changed=crypto/internal.h
+[ring 0.17.8] cargo:rerun-if-changed=crypto/cipher_extra/asm/chacha20_poly1305_x86_64.pl
+[ring 0.17.8] cargo:rerun-if-changed=crypto/cipher_extra/asm/chacha20_poly1305_armv8.pl
+[ring 0.17.8] cargo:rerun-if-changed=include/ring-core/type_check.h
+[ring 0.17.8] cargo:rerun-if-changed=include/ring-core/aes.h
+[ring 0.17.8] cargo:rerun-if-changed=include/ring-core/mem.h
+[ring 0.17.8] cargo:rerun-if-changed=include/ring-core/base.h
+[ring 0.17.8] cargo:rerun-if-changed=include/ring-core/asm_base.h
+[ring 0.17.8] cargo:rerun-if-changed=include/ring-core/arm_arch.h
+[ring 0.17.8] cargo:rerun-if-changed=include/ring-core/target.h
+[ring 0.17.8] cargo:rerun-if-changed=include/ring-core/poly1305.h
+[ring 0.17.8] cargo:rerun-if-changed=include/ring-core/check.h
+[ring 0.17.8] cargo:rerun-if-changed=third_party/fiat/curve25519_64_adx.h
+[ring 0.17.8] cargo:rerun-if-changed=third_party/fiat/p256_32.h
+[ring 0.17.8] cargo:rerun-if-changed=third_party/fiat/curve25519_32.h
+[ring 0.17.8] cargo:rerun-if-changed=third_party/fiat/p256_64_msvc.h
+[ring 0.17.8] cargo:rerun-if-changed=third_party/fiat/curve25519_64_msvc.h
+[ring 0.17.8] cargo:rerun-if-changed=third_party/fiat/curve25519_64.h
+[ring 0.17.8] cargo:rerun-if-changed=third_party/fiat/asm/fiat_curve25519_adx_square.S
+[ring 0.17.8] cargo:rerun-if-changed=third_party/fiat/asm/fiat_curve25519_adx_mul.S
+[ring 0.17.8] cargo:rerun-if-changed=third_party/fiat/LICENSE
+[ring 0.17.8] cargo:rerun-if-changed=third_party/fiat/p256_64.h
+[protobuf-src 1.1.0+21.5] config.status: executing libtool commands
+[protobuf-src 1.1.0+21.5] === configuring in third_party/googletest (/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/build/third_party/googletest)
+[protobuf-src 1.1.0+21.5] configure: running /bin/bash /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/third_party/googletest/configure --disable-option-checking '--prefix=/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install'  '--disable-shared' '--enable-static' '--disable-maintainer-mode' 'CC=cc' 'CFLAGS=-O0 -ffunction-sections -fdata-sections -fPIC -m64' 'CXX=c++' 'CXXFLAGS=-O0 -ffunction-sections -fdata-sections -fPIC -m64' --cache-file=/dev/null --srcdir=/home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/third_party/googletest
+[protobuf-src 1.1.0+21.5] checking for a BSD-compatible install... /usr/bin/install -c
+[protobuf-src 1.1.0+21.5] checking whether build environment is sane... yes
+[protobuf-src 1.1.0+21.5] checking for a race-free mkdir -p... /usr/bin/mkdir -p
+[protobuf-src 1.1.0+21.5] checking for gawk... gawk
+[protobuf-src 1.1.0+21.5] checking whether make sets $(MAKE)... yes
+[protobuf-src 1.1.0+21.5] checking whether make supports nested variables... yes
+[protobuf-src 1.1.0+21.5] checking that generated files are newer than configure... done
+[protobuf-src 1.1.0+21.5] configure: creating ./config.status
+[protobuf-src 1.1.0+21.5] config.status: creating Makefile
+[protobuf-src 1.1.0+21.5] === configuring in googletest (/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/build/third_party/googletest/googletest)
+[protobuf-src 1.1.0+21.5] configure: running /bin/bash /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/third_party/googletest/googletest/configure --disable-option-checking '--prefix=/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install'  '--disable-shared' '--enable-static' '--disable-maintainer-mode' 'CC=cc' 'CFLAGS=-O0 -ffunction-sections -fdata-sections -fPIC -m64' 'CXX=c++' 'CXXFLAGS=-O0 -ffunction-sections -fdata-sections -fPIC -m64' --cache-file=/dev/null --srcdir=/home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/third_party/googletest/googletest
+[protobuf-src 1.1.0+21.5] checking for a BSD-compatible install... /usr/bin/install -c
+[protobuf-src 1.1.0+21.5] checking whether build environment is sane... yes
+[protobuf-src 1.1.0+21.5] checking for a race-free mkdir -p... /usr/bin/mkdir -p
+[protobuf-src 1.1.0+21.5] checking for gawk... gawk
+[protobuf-src 1.1.0+21.5] checking whether make sets $(MAKE)... yes
+[protobuf-src 1.1.0+21.5] checking whether make supports nested variables... yes
+[protobuf-src 1.1.0+21.5] checking for gcc... cc
+[protobuf-src 1.1.0+21.5] checking whether the C compiler works... yes
+[protobuf-src 1.1.0+21.5] checking for C compiler default output file name... a.out
+[protobuf-src 1.1.0+21.5] checking for suffix of executables... 
+[protobuf-src 1.1.0+21.5] checking whether we are cross compiling... no
+[protobuf-src 1.1.0+21.5] checking for suffix of object files... o
+[protobuf-src 1.1.0+21.5] checking whether the compiler supports GNU C... yes
+[protobuf-src 1.1.0+21.5] checking whether cc accepts -g... yes
+[protobuf-src 1.1.0+21.5] checking for cc option to enable C11 features... none needed
+[protobuf-src 1.1.0+21.5] checking whether cc understands -c and -o together... yes
+[protobuf-src 1.1.0+21.5] checking whether make supports the include directive... yes (GNU style)
+[protobuf-src 1.1.0+21.5] checking dependency style of cc... gcc3
+[protobuf-src 1.1.0+21.5] checking whether the compiler supports GNU C++... yes
+[protobuf-src 1.1.0+21.5] checking whether c++ accepts -g... yes
+[protobuf-src 1.1.0+21.5] checking for c++ option to enable C++11 features... none needed
+[protobuf-src 1.1.0+21.5] checking dependency style of c++... gcc3
+[protobuf-src 1.1.0+21.5] checking build system type... x86_64-pc-linux-gnu
+[protobuf-src 1.1.0+21.5] checking host system type... x86_64-pc-linux-gnu
+[protobuf-src 1.1.0+21.5] checking how to print strings... printf
+[protobuf-src 1.1.0+21.5] checking for a sed that does not truncate output... /usr/bin/sed
+[protobuf-src 1.1.0+21.5] checking for grep that handles long lines and -e... /usr/bin/grep
+[protobuf-src 1.1.0+21.5] checking for egrep... /usr/bin/grep -E
+[protobuf-src 1.1.0+21.5] checking for fgrep... /usr/bin/grep -F
+[protobuf-src 1.1.0+21.5] checking for ld used by cc... /usr/bin/ld
+[protobuf-src 1.1.0+21.5] checking if the linker (/usr/bin/ld) is GNU ld... yes
+[protobuf-src 1.1.0+21.5] checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+[protobuf-src 1.1.0+21.5] checking the name lister (/usr/bin/nm -B) interface... BSD nm
+[protobuf-src 1.1.0+21.5] checking whether ln -s works... yes
+[protobuf-src 1.1.0+21.5] checking the maximum length of command line arguments... 1572864
+[protobuf-src 1.1.0+21.5] checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+[protobuf-src 1.1.0+21.5] checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+[protobuf-src 1.1.0+21.5] checking for /usr/bin/ld option to reload object files... -r
+[protobuf-src 1.1.0+21.5] checking for file... file
+[protobuf-src 1.1.0+21.5] checking for objdump... objdump
+[protobuf-src 1.1.0+21.5] checking how to recognize dependent libraries... pass_all
+[protobuf-src 1.1.0+21.5] checking for dlltool... no
+[protobuf-src 1.1.0+21.5] checking how to associate runtime and link libraries... printf %s\n
+[protobuf-src 1.1.0+21.5] checking for ar... ar
+[protobuf-src 1.1.0+21.5] checking for archiver @FILE support... @
+[protobuf-src 1.1.0+21.5] checking for strip... strip
+[protobuf-src 1.1.0+21.5] checking for ranlib... ranlib
+[protobuf-src 1.1.0+21.5] checking command to parse /usr/bin/nm -B output from cc object... ok
+[protobuf-src 1.1.0+21.5] checking for sysroot... no
+[protobuf-src 1.1.0+21.5] checking for a working dd... /usr/bin/dd
+[protobuf-src 1.1.0+21.5] checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+[protobuf-src 1.1.0+21.5] checking for mt... mt
+[protobuf-src 1.1.0+21.5] checking if mt is a manifest tool... no
+[protobuf-src 1.1.0+21.5] checking for stdio.h... yes
+[protobuf-src 1.1.0+21.5] checking for stdlib.h... yes
+[protobuf-src 1.1.0+21.5] checking for string.h... yes
+[protobuf-src 1.1.0+21.5] checking for inttypes.h... yes
+[protobuf-src 1.1.0+21.5] checking for stdint.h... yes
+[protobuf-src 1.1.0+21.5] checking for strings.h... yes
+[protobuf-src 1.1.0+21.5] checking for sys/stat.h... yes
+[protobuf-src 1.1.0+21.5] checking for sys/types.h... yes
+[protobuf-src 1.1.0+21.5] checking for unistd.h... yes
+[protobuf-src 1.1.0+21.5] checking for dlfcn.h... yes
+[protobuf-src 1.1.0+21.5] checking for objdir... .libs
+[methods 0.1.0] Embedding methods
+[methods 0.1.0] Embedding tests
+[methods 0.1.0] for guest_pkg in guest_packages
+[methods 0.1.0] Building guest package methods.hello_guest
+[methods 0.1.0] Using rustc: /home/ubuntu/.rustup/toolchains/risc0/bin/rustc
+[methods 0.1.0] cargo:rerun-if-env-changed=RISC0_RUST_SRC
+[methods 0.1.0] Building guest package: cargo test --target riscv32im-risc0-zkvm-elf
+[methods 0.1.0] ~~~~~~ env -u CARGO -u CARGO_CFG_PANIC -u CARGO_CFG_TARGET_ARCH -u CARGO_CFG_TARGET_ENDIAN -u CARGO_CFG_TARGET_ENV -u CARGO_CFG_TARGET_FAMILY -u CARGO_CFG_TARGET_FEATURE -u CARGO_CFG_TARGET_HAS_ATOMIC -u CARGO_CFG_TARGET_OS -u CARGO_CFG_TARGET_POINTER_WIDTH -u CARGO_CFG_TARGET_VENDOR -u CARGO_CFG_UNIX -u CARGO_HOME -u CARGO_MAKEFLAGS -u CARGO_MANIFEST_DIR -u CARGO_PKG_AUTHORS -u CARGO_PKG_DESCRIPTION -u CARGO_PKG_HOMEPAGE -u CARGO_PKG_LICENSE -u CARGO_PKG_LICENSE_FILE -u CARGO_PKG_NAME -u CARGO_PKG_README -u CARGO_PKG_REPOSITORY -u CARGO_PKG_RUST_VERSION -u CARGO_PKG_VERSION -u CARGO_PKG_VERSION_MAJOR -u CARGO_PKG_VERSION_MINOR -u CARGO_PKG_VERSION_PATCH -u CARGO_PKG_VERSION_PRE -u RUSTUP_TOOLCHAIN CARGO_ENCODED_RUSTFLAGS="-C\u{1f}passes=loweratomic\u{1f}-C\u{1f}link-arg=-Ttext=0x00200800\u{1f}-C\u{1f}link-arg=--fatal-warnings\u{1f}-C\u{1f}panic=abort" CC="/home/ubuntu/.local/share/cargo-risczero/cpp/bin/riscv32-unknown-elf-gcc" CFLAGS_riscv32im_risc0_zkvm_elf="-march=rv32im -nostdlib" RUSTC="/home/ubuntu/.rustup/toolchains/risc0/bin/rustc" "cargo" "test" "--target" "riscv32im-risc0-zkvm-elf"
+[methods 0.1.0] cargo:rerun-if-env-changed=RISC0_BUILD_DEBUG
+[methods 0.1.0] Building guest package:  env -u CARGO -u CARGO_CFG_PANIC -u CARGO_CFG_TARGET_ARCH -u CARGO_CFG_TARGET_ENDIAN -u CARGO_CFG_TARGET_ENV -u CARGO_CFG_TARGET_FAMILY -u CARGO_CFG_TARGET_FEATURE -u CARGO_CFG_TARGET_HAS_ATOMIC -u CARGO_CFG_TARGET_OS -u CARGO_CFG_TARGET_POINTER_WIDTH -u CARGO_CFG_TARGET_VENDOR -u CARGO_CFG_UNIX -u CARGO_HOME -u CARGO_MAKEFLAGS -u CARGO_MANIFEST_DIR -u CARGO_PKG_AUTHORS -u CARGO_PKG_DESCRIPTION -u CARGO_PKG_HOMEPAGE -u CARGO_PKG_LICENSE -u CARGO_PKG_LICENSE_FILE -u CARGO_PKG_NAME -u CARGO_PKG_README -u CARGO_PKG_REPOSITORY -u CARGO_PKG_RUST_VERSION -u CARGO_PKG_VERSION -u CARGO_PKG_VERSION_MAJOR -u CARGO_PKG_VERSION_MINOR -u CARGO_PKG_VERSION_PATCH -u CARGO_PKG_VERSION_PRE -u RUSTUP_TOOLCHAIN CARGO_ENCODED_RUSTFLAGS="-C\u{1f}passes=loweratomic\u{1f}-C\u{1f}link-arg=-Ttext=0x00200800\u{1f}-C\u{1f}link-arg=--fatal-warnings\u{1f}-C\u{1f}panic=abort" CC="/home/ubuntu/.local/share/cargo-risczero/cpp/bin/riscv32-unknown-elf-gcc" CFLAGS_riscv32im_risc0_zkvm_elf="-march=rv32im -nostdlib" RUSTC="/home/ubuntu/.rustup/toolchains/risc0/bin/rustc" "cargo" "test" "--target" "riscv32im-risc0-zkvm-elf" "--no-run" "--manifest-path" "/home/ubuntu/xxx/hello-world/methods/guest/Cargo.toml" "--target-dir" "/home/ubuntu/xxx/hello-world/methods/guest" "--release"
+[methods 0.1.0] BROWSER: /home/ubuntu/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/bin/helpers/browser.sh
+[methods 0.1.0] CARGO: /home/ubuntu/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/cargo
+[methods 0.1.0] CARGO_CFG_PANIC: unwind
+[methods 0.1.0] CARGO_CFG_TARGET_ARCH: x86_64
+[methods 0.1.0] CARGO_CFG_TARGET_ENDIAN: little
+[methods 0.1.0] CARGO_CFG_TARGET_ENV: gnu
+[methods 0.1.0] CARGO_CFG_TARGET_FAMILY: unix
+[methods 0.1.0] CARGO_CFG_TARGET_FEATURE: fxsr,sse,sse2
+[methods 0.1.0] CARGO_CFG_TARGET_HAS_ATOMIC: 16,32,64,8,ptr
+[methods 0.1.0] CARGO_CFG_TARGET_OS: linux
+[methods 0.1.0] CARGO_CFG_TARGET_POINTER_WIDTH: 64
+[methods 0.1.0] CARGO_CFG_TARGET_VENDOR: unknown
+[methods 0.1.0] CARGO_CFG_UNIX: 
+[methods 0.1.0] CARGO_ENCODED_RUSTFLAGS: 
+[methods 0.1.0] CARGO_HOME: /home/ubuntu/.cargo
+[methods 0.1.0] CARGO_MAKEFLAGS: -j --jobserver-fds=7,8 --jobserver-auth=7,8
+[methods 0.1.0] CARGO_MANIFEST_DIR: /home/ubuntu/xxx/hello-world/methods
+[methods 0.1.0] CARGO_PKG_AUTHORS: 
+[methods 0.1.0] CARGO_PKG_DESCRIPTION: 
+[methods 0.1.0] CARGO_PKG_HOMEPAGE: 
+[methods 0.1.0] CARGO_PKG_LICENSE: 
+[methods 0.1.0] CARGO_PKG_LICENSE_FILE: 
+[methods 0.1.0] CARGO_PKG_NAME: methods
+[methods 0.1.0] CARGO_PKG_README: 
+[methods 0.1.0] CARGO_PKG_REPOSITORY: 
+[methods 0.1.0] CARGO_PKG_RUST_VERSION: 
+[methods 0.1.0] CARGO_PKG_VERSION: 0.1.0
+[methods 0.1.0] CARGO_PKG_VERSION_MAJOR: 0
+[methods 0.1.0] CARGO_PKG_VERSION_MINOR: 1
+[methods 0.1.0] CARGO_PKG_VERSION_PATCH: 0
+[methods 0.1.0] CARGO_PKG_VERSION_PRE: 
+[methods 0.1.0] COLORTERM: truecolor
+[methods 0.1.0] DBUS_SESSION_BUS_ADDRESS: unix:path=/run/user/1000/bus
+[methods 0.1.0] DEBUG: true
+[methods 0.1.0] GIT_ASKPASS: /home/ubuntu/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/extensions/git/dist/askpass.sh
+[methods 0.1.0] HOME: /home/ubuntu
+[methods 0.1.0] HOST: x86_64-unknown-linux-gnu
+[methods 0.1.0] LANG: C.UTF-8
+[methods 0.1.0] LD_LIBRARY_PATH: /home/ubuntu/xxx/hello-world/target/debug/deps:/home/ubuntu/xxx/hello-world/target/debug:/home/ubuntu/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib:/home/ubuntu/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib
+[methods 0.1.0] LESSCLOSE: /usr/bin/lesspipe %s %s
+[methods 0.1.0] LESSOPEN: | /usr/bin/lesspipe %s
+[methods 0.1.0] LOGNAME: ubuntu
+[methods 0.1.0] LS_COLORS: rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+[methods 0.1.0] MOTD_SHOWN: pam
+[methods 0.1.0] NUM_JOBS: 36
+[methods 0.1.0] OLDPWD: /home/ubuntu/xxx
+[methods 0.1.0] OPT_LEVEL: 3
+[methods 0.1.0] OUT_DIR: /home/ubuntu/xxx/hello-world/target/debug/build/methods-9c0fd310761d5f63/out
+[methods 0.1.0] PATH: /home/ubuntu/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/bin/remote-cli:/home/ubuntu/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/ubuntu/.sp1/bin:/usr/local/go/bin:/home/ubuntu/.sp1/bin:/usr/local/go/bin
+[methods 0.1.0] PROFILE: debug
+[methods 0.1.0] PWD: /home/ubuntu/xxx/hello-world
+[methods 0.1.0] RUSTC: /home/ubuntu/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/rustc
+[methods 0.1.0] RUSTDOC: /home/ubuntu/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/rustdoc
+[methods 0.1.0] RUSTUP_HOME: /home/ubuntu/.rustup
+[methods 0.1.0] RUSTUP_TOOLCHAIN: stable-x86_64-unknown-linux-gnu
+[methods 0.1.0] RUST_RECURSION_COUNT: 1
+[methods 0.1.0] SHELL: /bin/bash
+[methods 0.1.0] SHLVL: 2
+[methods 0.1.0] SSH_CLIENT: 107.116.92.146 44318 22
+[methods 0.1.0] SSH_CONNECTION: 107.116.92.146 44318 172.31.25.146 22
+[methods 0.1.0] SSL_CERT_DIR: /usr/lib/ssl/certs
+[methods 0.1.0] SSL_CERT_FILE: /usr/lib/ssl/certs/ca-certificates.crt
+[methods 0.1.0] TARGET: x86_64-unknown-linux-gnu
+[methods 0.1.0] TERM: xterm-256color
+[methods 0.1.0] TERM_PROGRAM: vscode
+[methods 0.1.0] TERM_PROGRAM_VERSION: 1.88.1
+[methods 0.1.0] USER: ubuntu
+[methods 0.1.0] VSCODE_GIT_ASKPASS_EXTRA_ARGS: 
+[methods 0.1.0] VSCODE_GIT_ASKPASS_MAIN: /home/ubuntu/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/extensions/git/dist/askpass-main.js
+[methods 0.1.0] VSCODE_GIT_ASKPASS_NODE: /home/ubuntu/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/node
+[methods 0.1.0] VSCODE_GIT_IPC_HANDLE: /run/user/1000/vscode-git-56940b55ad.sock
+[methods 0.1.0] VSCODE_IPC_HOOK_CLI: /run/user/1000/vscode-ipc-68228681-983a-4037-ab37-3dd7a625c49a.sock
+[methods 0.1.0] XDG_DATA_DIRS: /usr/local/share:/usr/share:/var/lib/snapd/desktop
+[methods 0.1.0] XDG_RUNTIME_DIR: /run/user/1000
+[methods 0.1.0] XDG_SESSION_CLASS: user
+[methods 0.1.0] XDG_SESSION_ID: 253
+[methods 0.1.0] XDG_SESSION_TYPE: tty
+[methods 0.1.0] _: /home/ubuntu/.cargo/bin/cargo
+[protobuf-src 1.1.0+21.5] checking if cc supports -fno-rtti -fno-exceptions... no
+[protobuf-src 1.1.0+21.5] checking for cc option to produce PIC... -fPIC -DPIC
+[protobuf-src 1.1.0+21.5] checking if cc PIC flag -fPIC -DPIC works... yes
+[protobuf-src 1.1.0+21.5] checking if cc static flag -static works... yes
+[protobuf-src 1.1.0+21.5] checking if cc supports -c -o file.o... yes
+[protobuf-src 1.1.0+21.5] checking if cc supports -c -o file.o... (cached) yes
+[protobuf-src 1.1.0+21.5] checking whether the cc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+[protobuf-src 1.1.0+21.5] checking dynamic linker characteristics... GNU/Linux ld.so
+[protobuf-src 1.1.0+21.5] checking how to hardcode library paths into programs... immediate
+[protobuf-src 1.1.0+21.5] checking whether stripping libraries is possible... yes
+[protobuf-src 1.1.0+21.5] checking if libtool supports shared libraries... yes
+[protobuf-src 1.1.0+21.5] checking whether to build shared libraries... no
+[protobuf-src 1.1.0+21.5] checking whether to build static libraries... yes
+[protobuf-src 1.1.0+21.5] checking how to run the C++ preprocessor... c++ -E
+[protobuf-src 1.1.0+21.5] checking for ld used by c++... /usr/bin/ld -m elf_x86_64
+[protobuf-src 1.1.0+21.5] checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+[protobuf-src 1.1.0+21.5] checking whether the c++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+[protobuf-src 1.1.0+21.5] checking for c++ option to produce PIC... -fPIC -DPIC
+[protobuf-src 1.1.0+21.5] checking if c++ PIC flag -fPIC -DPIC works... yes
+[protobuf-src 1.1.0+21.5] checking if c++ static flag -static works... yes
+[protobuf-src 1.1.0+21.5] checking if c++ supports -c -o file.o... yes
+[protobuf-src 1.1.0+21.5] checking if c++ supports -c -o file.o... (cached) yes
+[protobuf-src 1.1.0+21.5] checking whether the c++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+[protobuf-src 1.1.0+21.5] checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+[protobuf-src 1.1.0+21.5] checking how to hardcode library paths into programs... immediate
+[protobuf-src 1.1.0+21.5] checking for python... :
+[protobuf-src 1.1.0+21.5] checking for the pthreads library -lpthreads... no
+[protobuf-src 1.1.0+21.5] checking whether pthreads work without any flags... yes
+[protobuf-src 1.1.0+21.5] checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+[protobuf-src 1.1.0+21.5] checking if more special flags are required for pthreads... no
+[protobuf-src 1.1.0+21.5] checking whether to check for GCC pthread/shared inconsistencies... yes
+[protobuf-src 1.1.0+21.5] checking whether -pthread is sufficient with -shared... yes
+[protobuf-src 1.1.0+21.5] checking that generated files are newer than configure... done
+[protobuf-src 1.1.0+21.5] configure: creating ./config.status
+[protobuf-src 1.1.0+21.5] config.status: creating Makefile
+[protobuf-src 1.1.0+21.5] config.status: creating scripts/gtest-config
+[protobuf-src 1.1.0+21.5] config.status: creating build-aux/config.h
+[protobuf-src 1.1.0+21.5] config.status: executing depfiles commands
+[protobuf-src 1.1.0+21.5] config.status: executing libtool commands
+[protobuf-src 1.1.0+21.5] === configuring in googlemock (/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/build/third_party/googletest/googlemock)
+[protobuf-src 1.1.0+21.5] configure: running /bin/bash /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/third_party/googletest/googlemock/configure --disable-option-checking '--prefix=/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install'  '--disable-shared' '--enable-static' '--disable-maintainer-mode' 'CC=cc' 'CFLAGS=-O0 -ffunction-sections -fdata-sections -fPIC -m64' 'CXX=c++' 'CXXFLAGS=-O0 -ffunction-sections -fdata-sections -fPIC -m64' --cache-file=/dev/null --srcdir=/home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/third_party/googletest/googlemock
+[protobuf-src 1.1.0+21.5] checking for a BSD-compatible install... /usr/bin/install -c
+[protobuf-src 1.1.0+21.5] checking whether build environment is sane... yes
+[protobuf-src 1.1.0+21.5] checking for a race-free mkdir -p... /usr/bin/mkdir -p
+[protobuf-src 1.1.0+21.5] checking for gawk... gawk
+[protobuf-src 1.1.0+21.5] checking whether make sets $(MAKE)... yes
+[protobuf-src 1.1.0+21.5] checking whether make supports nested variables... yes
+[protobuf-src 1.1.0+21.5] checking for gcc... cc
+[protobuf-src 1.1.0+21.5] checking whether the C compiler works... yes
+[protobuf-src 1.1.0+21.5] checking for C compiler default output file name... a.out
+[protobuf-src 1.1.0+21.5] checking for suffix of executables... 
+[protobuf-src 1.1.0+21.5] checking whether we are cross compiling... no
+[protobuf-src 1.1.0+21.5] checking for suffix of object files... o
+[protobuf-src 1.1.0+21.5] checking whether the compiler supports GNU C... yes
+[protobuf-src 1.1.0+21.5] checking whether cc accepts -g... yes
+[protobuf-src 1.1.0+21.5] checking for cc option to enable C11 features... none needed
+[protobuf-src 1.1.0+21.5] checking whether cc understands -c and -o together... yes
+[protobuf-src 1.1.0+21.5] checking whether make supports the include directive... yes (GNU style)
+[protobuf-src 1.1.0+21.5] checking dependency style of cc... gcc3
+[protobuf-src 1.1.0+21.5] checking whether the compiler supports GNU C++... yes
+[protobuf-src 1.1.0+21.5] checking whether c++ accepts -g... yes
+[protobuf-src 1.1.0+21.5] checking for c++ option to enable C++11 features... none needed
+[protobuf-src 1.1.0+21.5] checking dependency style of c++... gcc3
+[protobuf-src 1.1.0+21.5] checking build system type... x86_64-pc-linux-gnu
+[protobuf-src 1.1.0+21.5] checking host system type... x86_64-pc-linux-gnu
+[protobuf-src 1.1.0+21.5] checking how to print strings... printf
+[protobuf-src 1.1.0+21.5] checking for a sed that does not truncate output... /usr/bin/sed
+[protobuf-src 1.1.0+21.5] checking for grep that handles long lines and -e... /usr/bin/grep
+[protobuf-src 1.1.0+21.5] checking for egrep... /usr/bin/grep -E
+[protobuf-src 1.1.0+21.5] checking for fgrep... /usr/bin/grep -F
+[protobuf-src 1.1.0+21.5] checking for ld used by cc... /usr/bin/ld
+[protobuf-src 1.1.0+21.5] checking if the linker (/usr/bin/ld) is GNU ld... yes
+[protobuf-src 1.1.0+21.5] checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+[protobuf-src 1.1.0+21.5] checking the name lister (/usr/bin/nm -B) interface... BSD nm
+[protobuf-src 1.1.0+21.5] checking whether ln -s works... yes
+[protobuf-src 1.1.0+21.5] checking the maximum length of command line arguments... 1572864
+[protobuf-src 1.1.0+21.5] checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+[protobuf-src 1.1.0+21.5] checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+[protobuf-src 1.1.0+21.5] checking for /usr/bin/ld option to reload object files... -r
+[protobuf-src 1.1.0+21.5] checking for file... file
+[protobuf-src 1.1.0+21.5] checking for objdump... objdump
+[protobuf-src 1.1.0+21.5] checking how to recognize dependent libraries... pass_all
+[protobuf-src 1.1.0+21.5] checking for dlltool... no
+[protobuf-src 1.1.0+21.5] checking how to associate runtime and link libraries... printf %s\n
+[protobuf-src 1.1.0+21.5] checking for ar... ar
+[protobuf-src 1.1.0+21.5] checking for archiver @FILE support... @
+[protobuf-src 1.1.0+21.5] checking for strip... strip
+[protobuf-src 1.1.0+21.5] checking for ranlib... ranlib
+[protobuf-src 1.1.0+21.5] checking command to parse /usr/bin/nm -B output from cc object... ok
+[protobuf-src 1.1.0+21.5] checking for sysroot... no
+[protobuf-src 1.1.0+21.5] checking for a working dd... /usr/bin/dd
+[protobuf-src 1.1.0+21.5] checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+[protobuf-src 1.1.0+21.5] checking for mt... mt
+[protobuf-src 1.1.0+21.5] checking if mt is a manifest tool... no
+[protobuf-src 1.1.0+21.5] checking for stdio.h... yes
+[protobuf-src 1.1.0+21.5] checking for stdlib.h... yes
+[protobuf-src 1.1.0+21.5] checking for string.h... yes
+[protobuf-src 1.1.0+21.5] checking for inttypes.h... yes
+[protobuf-src 1.1.0+21.5] checking for stdint.h... yes
+[protobuf-src 1.1.0+21.5] checking for strings.h... yes
+[protobuf-src 1.1.0+21.5] checking for sys/stat.h... yes
+[protobuf-src 1.1.0+21.5] checking for sys/types.h... yes
+[protobuf-src 1.1.0+21.5] checking for unistd.h... yes
+[protobuf-src 1.1.0+21.5] checking for dlfcn.h... yes
+[protobuf-src 1.1.0+21.5] checking for objdir... .libs
+[protobuf-src 1.1.0+21.5] checking if cc supports -fno-rtti -fno-exceptions... no
+[protobuf-src 1.1.0+21.5] checking for cc option to produce PIC... -fPIC -DPIC
+[protobuf-src 1.1.0+21.5] checking if cc PIC flag -fPIC -DPIC works... yes
+[protobuf-src 1.1.0+21.5] checking if cc static flag -static works... yes
+[protobuf-src 1.1.0+21.5] checking if cc supports -c -o file.o... yes
+[protobuf-src 1.1.0+21.5] checking if cc supports -c -o file.o... (cached) yes
+[protobuf-src 1.1.0+21.5] checking whether the cc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+[protobuf-src 1.1.0+21.5] checking dynamic linker characteristics... GNU/Linux ld.so
+[protobuf-src 1.1.0+21.5] checking how to hardcode library paths into programs... immediate
+[protobuf-src 1.1.0+21.5] checking whether stripping libraries is possible... yes
+[protobuf-src 1.1.0+21.5] checking if libtool supports shared libraries... yes
+[protobuf-src 1.1.0+21.5] checking whether to build shared libraries... no
+[protobuf-src 1.1.0+21.5] checking whether to build static libraries... yes
+[protobuf-src 1.1.0+21.5] checking how to run the C++ preprocessor... c++ -E
+[protobuf-src 1.1.0+21.5] checking for ld used by c++... /usr/bin/ld -m elf_x86_64
+[protobuf-src 1.1.0+21.5] checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+[protobuf-src 1.1.0+21.5] checking whether the c++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+[protobuf-src 1.1.0+21.5] checking for c++ option to produce PIC... -fPIC -DPIC
+[protobuf-src 1.1.0+21.5] checking if c++ PIC flag -fPIC -DPIC works... yes
+[protobuf-src 1.1.0+21.5] checking if c++ static flag -static works... yes
+[protobuf-src 1.1.0+21.5] checking if c++ supports -c -o file.o... yes
+[protobuf-src 1.1.0+21.5] checking if c++ supports -c -o file.o... (cached) yes
+[protobuf-src 1.1.0+21.5] checking whether the c++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+[protobuf-src 1.1.0+21.5] checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+[protobuf-src 1.1.0+21.5] checking how to hardcode library paths into programs... immediate
+[protobuf-src 1.1.0+21.5] checking for python... :
+[protobuf-src 1.1.0+21.5] checking for the pthreads library -lpthreads... no
+[protobuf-src 1.1.0+21.5] checking whether pthreads work without any flags... yes
+[protobuf-src 1.1.0+21.5] checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+[protobuf-src 1.1.0+21.5] checking if more special flags are required for pthreads... no
+[protobuf-src 1.1.0+21.5] checking whether to check for GCC pthread/shared inconsistencies... yes
+[protobuf-src 1.1.0+21.5] checking whether -pthread is sufficient with -shared... yes
+[protobuf-src 1.1.0+21.5] checking for gtest-config... no
+[protobuf-src 1.1.0+21.5] checking that generated files are newer than configure... done
+[protobuf-src 1.1.0+21.5] configure: creating ./config.status
+[protobuf-src 1.1.0+21.5] config.status: creating Makefile
+[protobuf-src 1.1.0+21.5] config.status: creating scripts/gmock-config
+[protobuf-src 1.1.0+21.5] config.status: creating build-aux/config.h
+[protobuf-src 1.1.0+21.5] config.status: executing depfiles commands
+[protobuf-src 1.1.0+21.5] config.status: executing libtool commands
+[protobuf-src 1.1.0+21.5] running: cd "/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/build" && MAKEFLAGS="-j --jobserver-fds=7,8 --jobserver-auth=7,8" "sh" "-c" "exec \"$0\" \"$@\"" "make" "install" "-j36"
+[protobuf-src 1.1.0+21.5] Making install in .
+[protobuf-src 1.1.0+21.5] make[1]: Entering directory '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/build'
+[protobuf-src 1.1.0+21.5] make[2]: Entering directory '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/build'
+[protobuf-src 1.1.0+21.5] make[2]: Nothing to be done for 'install-exec-am'.
+[protobuf-src 1.1.0+21.5]  /usr/bin/mkdir -p '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/lib/pkgconfig'
+[protobuf-src 1.1.0+21.5]  /usr/bin/install -c -m 644 protobuf.pc protobuf-lite.pc '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/lib/pkgconfig'
+[protobuf-src 1.1.0+21.5] make[2]: Leaving directory '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/build'
+[protobuf-src 1.1.0+21.5] make[1]: Leaving directory '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/build'
+[protobuf-src 1.1.0+21.5] Making install in src
+[protobuf-src 1.1.0+21.5] make[1]: Entering directory '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/build/src'
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/wire_format.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/wrappers.pb.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/code_generator.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/command_line_interface.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/plugin.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/plugin.pb.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/subprocess.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/zip_writer.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/main.o
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/any_lite.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/arena.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/arenastring.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/arenaz_sampler.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/extension_set.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/generated_enum_util.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/generated_message_tctable_lite.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/generated_message_util.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/implicit_weak_message.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/inlined_string_field.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/io/coded_stream.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/io/io_win32.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/io/strtod.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/io/zero_copy_stream.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/io/zero_copy_stream_impl.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/io/zero_copy_stream_impl_lite.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/map.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/message_lite.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/parse_context.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/repeated_ptr_field.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/stubs/bytestream.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/repeated_field.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/stubs/common.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/stubs/int128.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/stubs/status.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/stubs/statusor.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/stubs/stringpiece.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/stubs/stringprintf.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/stubs/structurally_valid.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/stubs/strutil.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/stubs/time.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/wire_format_lite.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/any.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/any.pb.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/api.pb.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/importer.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/parser.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/descriptor.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/descriptor.pb.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/descriptor_database.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/duration.pb.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/dynamic_message.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/empty.pb.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/extension_set_heavy.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/field_mask.pb.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/generated_message_bases.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/generated_message_reflection.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/generated_message_tctable_full.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/io/gzip_stream.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/io/printer.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/io/tokenizer.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/map_field.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/message.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/reflection_ops.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/service.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/source_context.pb.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/struct.pb.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/stubs/substitute.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/text_format.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/timestamp.pb.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/type.pb.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/unknown_field_set.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/util/delimited_message_util.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/util/field_comparator.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/util/field_mask_util.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/util/internal/datapiece.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/util/internal/default_value_objectwriter.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/util/internal/error_listener.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/util/internal/field_mask_utility.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/util/internal/json_escaping.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/util/internal/json_objectwriter.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/util/internal/json_stream_parser.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/util/internal/object_writer.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/util/internal/proto_writer.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/util/internal/protostream_objectsource.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/util/internal/protostream_objectwriter.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/util/internal/type_info.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/util/internal/utility.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/util/json_util.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/util/message_differencer.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/util/time_util.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/util/type_resolver_util.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/cpp/enum.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/cpp/enum_field.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/cpp/extension.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/cpp/field.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/cpp/file.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/cpp/generator.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/cpp/helpers.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/cpp/map_field.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/cpp/message.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/cpp/message_field.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/cpp/padding_optimizer.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/cpp/parse_function_generator.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/cpp/primitive_field.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/cpp/service.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/cpp/string_field.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/csharp/csharp_doc_comment.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/csharp/csharp_enum.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/csharp/csharp_enum_field.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/csharp/csharp_field_base.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/csharp/csharp_generator.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/csharp/csharp_helpers.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/csharp/csharp_map_field.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/csharp/csharp_message.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/csharp/csharp_message_field.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/csharp/csharp_primitive_field.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/csharp/csharp_reflection_class.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/csharp/csharp_repeated_enum_field.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/csharp/csharp_repeated_message_field.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/csharp/csharp_repeated_primitive_field.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/csharp/csharp_source_generator_base.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/csharp/csharp_wrapper_field.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/java/context.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/java/doc_comment.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/java/enum.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/java/enum_field.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/java/enum_field_lite.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/java/enum_lite.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/java/extension.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/java/extension_lite.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/java/field.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/java/file.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/java/generator.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/java/generator_factory.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/java/helpers.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/java/kotlin_generator.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/java/map_field.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/java/map_field_lite.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/java/message.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/java/message_builder.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/java/message_builder_lite.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/java/message_field.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/java/message_field_lite.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/java/message_lite.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/java/name_resolver.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/java/primitive_field.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/java/primitive_field_lite.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/java/shared_code_generator.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/java/service.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/java/string_field.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/java/string_field_lite.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/objectivec/objectivec_enum.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/objectivec/objectivec_enum_field.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/objectivec/objectivec_extension.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/objectivec/objectivec_field.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/objectivec/objectivec_file.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/objectivec/objectivec_generator.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/objectivec/objectivec_helpers.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/objectivec/objectivec_map_field.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/objectivec/objectivec_message.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/objectivec/objectivec_message_field.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/objectivec/objectivec_oneof.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/objectivec/objectivec_primitive_field.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/php/php_generator.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/python/generator.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/python/helpers.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/python/pyi_generator.lo
+[protobuf-src 1.1.0+21.5]   CXX      google/protobuf/compiler/ruby/ruby_generator.lo
+[protobuf-src 1.1.0+21.5]   CXXLD    libprotobuf-lite.la
+[protobuf-src 1.1.0+21.5]   CXXLD    libprotobuf.la
+[protobuf-src 1.1.0+21.5]   CXXLD    libprotoc.la
+[protobuf-src 1.1.0+21.5] copying selected object files to avoid basename conflicts...
+[protobuf-src 1.1.0+21.5]   CXXLD    protoc
+[protobuf-src 1.1.0+21.5] make[2]: Entering directory '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/build/src'
+[protobuf-src 1.1.0+21.5]  /usr/bin/mkdir -p '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/lib'
+[protobuf-src 1.1.0+21.5]  /usr/bin/mkdir -p '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/include'
+[protobuf-src 1.1.0+21.5]  /bin/bash ../libtool   --mode=install /usr/bin/install -c   libprotobuf-lite.la libprotobuf.la libprotoc.la '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/lib'
+[protobuf-src 1.1.0+21.5]  /usr/bin/mkdir -p '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/include'
+[protobuf-src 1.1.0+21.5]  /usr/bin/mkdir -p '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/include/google/protobuf'
+[protobuf-src 1.1.0+21.5]  /usr/bin/install -c -m 644  /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/any.proto /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/api.proto /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/descriptor.proto /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/duration.proto /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/empty.proto /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/field_mask.proto /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/source_context.proto /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/struct.proto /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/timestamp.proto /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/type.proto /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/wrappers.proto '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/include/google/protobuf'
+[protobuf-src 1.1.0+21.5]  /usr/bin/mkdir -p '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/include/google/protobuf/compiler'
+[protobuf-src 1.1.0+21.5]  /usr/bin/mkdir -p '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/include/google/protobuf'
+[protobuf-src 1.1.0+21.5]  /usr/bin/install -c -m 644  /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/compiler/plugin.proto '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/include/google/protobuf/compiler'
+[protobuf-src 1.1.0+21.5]  /usr/bin/install -c -m 644  /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/any.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/any.pb.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/api.pb.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/arena.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/arena_impl.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/arenastring.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/arenaz_sampler.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/descriptor.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/descriptor.pb.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/descriptor_database.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/duration.pb.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/dynamic_message.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/empty.pb.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/endian.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/explicitly_constructed.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/extension_set.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/extension_set_inl.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/field_access_listener.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/field_mask.pb.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/generated_enum_reflection.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/generated_enum_util.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/generated_message_bases.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/generated_message_reflection.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/generated_message_tctable_decl.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/generated_message_tctable_impl.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/generated_message_util.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/has_bits.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/implicit_weak_message.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/inlined_string_field.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/map.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/map_entry.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/map_entry_lite.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/map_field.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/map_field_inl.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/map_field_lite.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/map_type_handler.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/message.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/message_lite.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/metadata.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/metadata_lite.h '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/include/google/protobuf'
+[protobuf-src 1.1.0+21.5]  /usr/bin/mkdir -p '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/include/google/protobuf/compiler/java'
+[protobuf-src 1.1.0+21.5]  /usr/bin/install -c -m 644  /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/compiler/java/generator.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/compiler/java/java_generator.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/compiler/java/kotlin_generator.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/compiler/java/names.h '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/include/google/protobuf/compiler/java'
+[protobuf-src 1.1.0+21.5]  /usr/bin/mkdir -p '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/include/google/protobuf/compiler/cpp'
+[protobuf-src 1.1.0+21.5]  /usr/bin/install -c -m 644  /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/compiler/cpp/cpp_generator.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/compiler/cpp/file.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/compiler/cpp/generator.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/compiler/cpp/helpers.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/compiler/cpp/names.h '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/include/google/protobuf/compiler/cpp'
+[protobuf-src 1.1.0+21.5]  /usr/bin/mkdir -p '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/include/google/protobuf/compiler/python'
+[protobuf-src 1.1.0+21.5]  /usr/bin/install -c -m 644  /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/compiler/python/generator.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/compiler/python/pyi_generator.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/compiler/python/python_generator.h '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/include/google/protobuf/compiler/python'
+[protobuf-src 1.1.0+21.5]  /usr/bin/mkdir -p '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/include/google/protobuf'
+[protobuf-src 1.1.0+21.5]  /usr/bin/install -c -m 644  /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/parse_context.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/port.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/port_def.inc /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/port_undef.inc /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/reflection.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/reflection_internal.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/reflection_ops.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/repeated_field.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/repeated_ptr_field.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/service.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/source_context.pb.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/struct.pb.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/text_format.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/timestamp.pb.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/type.pb.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/unknown_field_set.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/wire_format.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/wire_format_lite.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/wrappers.pb.h '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/include/google/protobuf'
+[protobuf-src 1.1.0+21.5] libtool: install: /usr/bin/install -c .libs/libprotobuf-lite.lai /home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/lib/libprotobuf-lite.la
+[protobuf-src 1.1.0+21.5]  /usr/bin/mkdir -p '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/include/google/protobuf/stubs'
+[protobuf-src 1.1.0+21.5] libtool: install: /usr/bin/install -c .libs/libprotobuf.lai /home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/lib/libprotobuf.la
+[protobuf-src 1.1.0+21.5]  /usr/bin/install -c -m 644  /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/stubs/bytestream.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/stubs/callback.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/stubs/casts.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/stubs/common.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/stubs/hash.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/stubs/logging.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/stubs/macros.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/stubs/map_util.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/stubs/mutex.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/stubs/once.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/stubs/platform_macros.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/stubs/port.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/stubs/status.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/stubs/stl_util.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/stubs/stringpiece.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/stubs/strutil.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/stubs/template_util.h '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/include/google/protobuf/stubs'
+[protobuf-src 1.1.0+21.5]  /usr/bin/mkdir -p '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/include/google/protobuf/util'
+[protobuf-src 1.1.0+21.5] libtool: install: /usr/bin/install -c .libs/libprotoc.lai /home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/lib/libprotoc.la
+[protobuf-src 1.1.0+21.5]  /usr/bin/install -c -m 644  /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/util/delimited_message_util.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/util/field_comparator.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/util/field_mask_util.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/util/json_util.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/util/message_differencer.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/util/time_util.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/util/type_resolver.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/util/type_resolver_util.h '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/include/google/protobuf/util'
+[protobuf-src 1.1.0+21.5]  /usr/bin/mkdir -p '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/include/google/protobuf/compiler/php'
+[protobuf-src 1.1.0+21.5]  /usr/bin/install -c -m 644  /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/compiler/php/php_generator.h '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/include/google/protobuf/compiler/php'
+[protobuf-src 1.1.0+21.5] libtool: install: /usr/bin/install -c .libs/libprotobuf-lite.a /home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/lib/libprotobuf-lite.a
+[protobuf-src 1.1.0+21.5]  /usr/bin/mkdir -p '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/include/google/protobuf/compiler'
+[protobuf-src 1.1.0+21.5]  /usr/bin/install -c -m 644  /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/compiler/code_generator.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/compiler/command_line_interface.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/compiler/importer.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/compiler/parser.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/compiler/plugin.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/compiler/plugin.pb.h '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/include/google/protobuf/compiler'
+[protobuf-src 1.1.0+21.5]  /usr/bin/mkdir -p '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/include/google/protobuf/compiler/ruby'
+[protobuf-src 1.1.0+21.5]  /usr/bin/install -c -m 644  /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/compiler/ruby/ruby_generator.h '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/include/google/protobuf/compiler/ruby'
+[protobuf-src 1.1.0+21.5] libtool: install: chmod 644 /home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/lib/libprotobuf-lite.a
+[protobuf-src 1.1.0+21.5]  /usr/bin/mkdir -p '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/include/google/protobuf/io'
+[protobuf-src 1.1.0+21.5]  /usr/bin/install -c -m 644  /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/io/coded_stream.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/io/gzip_stream.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/io/io_win32.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/io/printer.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/io/strtod.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/io/tokenizer.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/io/zero_copy_stream.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/io/zero_copy_stream_impl.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/io/zero_copy_stream_impl_lite.h '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/include/google/protobuf/io'
+[protobuf-src 1.1.0+21.5] libtool: install: ranlib /home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/lib/libprotobuf-lite.a
+[protobuf-src 1.1.0+21.5]  /usr/bin/mkdir -p '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/include/google/protobuf/compiler/csharp'
+[protobuf-src 1.1.0+21.5]  /usr/bin/install -c -m 644  /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/compiler/csharp/csharp_doc_comment.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/compiler/csharp/csharp_generator.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/compiler/csharp/csharp_names.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/compiler/csharp/csharp_options.h '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/include/google/protobuf/compiler/csharp'
+[protobuf-src 1.1.0+21.5]  /usr/bin/mkdir -p '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/include/google/protobuf/compiler/objectivec'
+[protobuf-src 1.1.0+21.5]  /usr/bin/install -c -m 644  /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/compiler/objectivec/objectivec_generator.h /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/protobuf-src-1.1.0+21.5/protobuf/src/google/protobuf/compiler/objectivec/objectivec_helpers.h '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/include/google/protobuf/compiler/objectivec'
+[protobuf-src 1.1.0+21.5] libtool: install: /usr/bin/install -c .libs/libprotobuf.a /home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/lib/libprotobuf.a
+[protobuf-src 1.1.0+21.5] libtool: install: chmod 644 /home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/lib/libprotobuf.a
+[protobuf-src 1.1.0+21.5] libtool: install: ranlib /home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/lib/libprotobuf.a
+[protobuf-src 1.1.0+21.5] libtool: install: /usr/bin/install -c .libs/libprotoc.a /home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/lib/libprotoc.a
+[protobuf-src 1.1.0+21.5] libtool: install: chmod 644 /home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/lib/libprotoc.a
+[protobuf-src 1.1.0+21.5] libtool: install: ranlib /home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/lib/libprotoc.a
+[protobuf-src 1.1.0+21.5] libtool: finish: PATH="/home/ubuntu/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/bin/remote-cli:/home/ubuntu/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/ubuntu/.sp1/bin:/usr/local/go/bin:/home/ubuntu/.sp1/bin:/usr/local/go/bin:/sbin" ldconfig -n /home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/lib
+[protobuf-src 1.1.0+21.5] ----------------------------------------------------------------------
+[protobuf-src 1.1.0+21.5] Libraries have been installed in:
+[protobuf-src 1.1.0+21.5]    /home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/lib
+[protobuf-src 1.1.0+21.5] 
+[protobuf-src 1.1.0+21.5] If you ever happen to want to link against installed libraries
+[protobuf-src 1.1.0+21.5] in a given directory, LIBDIR, you must either use libtool, and
+[protobuf-src 1.1.0+21.5] specify the full pathname of the library, or use the '-LLIBDIR'
+[protobuf-src 1.1.0+21.5] flag during linking and do at least one of the following:
+[protobuf-src 1.1.0+21.5]    - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+[protobuf-src 1.1.0+21.5]      during execution
+[protobuf-src 1.1.0+21.5]    - add LIBDIR to the 'LD_RUN_PATH' environment variable
+[protobuf-src 1.1.0+21.5]      during linking
+[protobuf-src 1.1.0+21.5]    - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+[protobuf-src 1.1.0+21.5]    - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+[protobuf-src 1.1.0+21.5] 
+[protobuf-src 1.1.0+21.5] See any operating system documentation about shared libraries for
+[protobuf-src 1.1.0+21.5] more information, such as the ld(1) and ld.so(8) manual pages.
+[protobuf-src 1.1.0+21.5] ----------------------------------------------------------------------
+[protobuf-src 1.1.0+21.5]  /usr/bin/mkdir -p '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/bin'
+[protobuf-src 1.1.0+21.5]   /bin/bash ../libtool   --mode=install /usr/bin/install -c protoc '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/bin'
+[protobuf-src 1.1.0+21.5] libtool: install: /usr/bin/install -c protoc /home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/bin/protoc
+[protobuf-src 1.1.0+21.5] make[2]: Leaving directory '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/build/src'
+[protobuf-src 1.1.0+21.5] make[1]: Leaving directory '/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/build/src'
+[protobuf-src 1.1.0+21.5] cargo:root=/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install
+[protobuf-src 1.1.0+21.5] cargo:rustc-env=INSTALL_DIR=/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install
+[protobuf-src 1.1.0+21.5] cargo:CXXBRIDGE_DIR0=/home/ubuntu/xxx/hello-world/target/debug/build/protobuf-src-ae7f73224d5b3104/out/install/include

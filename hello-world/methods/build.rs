@@ -19,8 +19,9 @@ use utils::*;
 
 fn main() {
     println!("Embedding methods");
-    // risc0_build::embed_methods();
-    pipeline::risc0();
+    risc0_build::embed_methods();
+    // pipeline::risc0();
+    // embed_tests();
 }
 
 fn embed_tests() -> Vec<GuestListEntry> {

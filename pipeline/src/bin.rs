@@ -66,7 +66,6 @@ fn sp1() {
 }
 
 pub fn risc0() {
-
     let meta = parse_metadata("guest");
     let tests = meta.tests();
     let bins = meta.bins();
@@ -76,7 +75,7 @@ pub fn risc0() {
         println!("{:?}\n", names);
     });
 
-    let builder = GuestBuilder::new(&meta, "riscv32im-risc0-zkvm-elf", "risc0")
+    let mut builder = GuestBuilder::new(&meta, "riscv32im-risc0-zkvm-elf", "risc0")
         .rust_flags(&[
             "passes=loweratomic",
             "link-arg=-Ttext=0x00200800",
@@ -89,7 +88,8 @@ pub fn risc0() {
         //         .join("cpp/bin/riscv32-unknown-elf-gcc")
         // )
         // .c_flags(&["-march=rv32im", "-nostdlib"]);
-        // .custom_args(&["--ignore-rust-version"]);
+        // .custom_args(&["--ignore-rust-version"]);    
+    builder.unset_cargo();
     let executor = builder.build_command("debug", None);
 
     println!("executor: {:?}", executor);

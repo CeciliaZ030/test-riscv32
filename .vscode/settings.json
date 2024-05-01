@@ -19,9 +19,9 @@
     // ],
     "rust-analyzer.linkedProjects": [
         // "program/Cargo.toml",
-        // "script/Cargo.toml",
-        "pipeline/Cargo.toml",
-        // "hello-world/Cargo.toml",
+        // "cunt/Cargo.toml",
+        // "pipeline/Cargo.toml",
+        "hello-world/Cargo.toml",
     ],
     "rust-analyzer.showUnlinkedFileNotification": false
 }

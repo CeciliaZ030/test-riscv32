@@ -26,7 +26,7 @@ fn testt() {
         println!("{:?}\n", names);
     });
 
-    let builder = GuestBuilder::new(meta, "riscv32im-succinct-zkvm-elf", "succinct")
+    let builder = GuestBuilder::new(&meta, "riscv32im-succinct-zkvm-elf", "succinct")
         .rust_flags(&[
             "passes=loweratomic",
             "link-arg=-Ttext=0x00200800",
@@ -122,10 +122,10 @@ pub struct GuestBuilder {
 
     pub sanitized_env: Vec<String>,
 
-    pub cargo: PathBuf,
+    pub cargo: Option<PathBuf>,
 
     // rustc compiler specific to toolchain
-    pub rustc_compiler: PathBuf,
+    pub rustc: Option<PathBuf>,
     // -C flags
     pub rust_flags: Option<Vec<String>>,
     // -Z flags
@@ -160,8 +160,8 @@ impl GuestBuilder {
             meta: meta.clone(),
             target: target.to_string(),
             sanitized_env: Vec::new(),
-            cargo: tools[0].clone(),
-            rustc_compiler: tools[1].clone(),
+            cargo: Some(tools[0].clone()),
+            rustc: Some(tools[1].clone()),
             rust_flags: None,
             z_flags: None,
             cc_compiler: None,
@@ -169,6 +169,14 @@ impl GuestBuilder {
             custom_args: Vec::new(),
             custom_env: HashMap::new(),
         }
+    }
+
+    pub fn unset_cargo(&mut self) {
+        self.cargo = None;
+    }
+
+    fn unset_rustc(&mut self) {
+        self.rustc = None;
     }
 
     fn sanitized_env(mut self, env_vars: &[&str]) -> Self {
@@ -318,7 +326,7 @@ impl GuestBuilder {
             meta,
             target,
             cargo,
-            rustc_compiler,
+            rustc,
             rust_flags,
             z_flags,
             cc_compiler,
@@ -347,13 +355,13 @@ impl GuestBuilder {
         }
 
         // Construct command from the toolchain-specific cargo
-        let mut cmd = Command::new("cargo");
+        let mut cmd = Command::new(cargo.map_or("cargo".to_string(), |c| String::from(c.to_str().unwrap())));
         // Clear unwanted env vars
         self.sanitize(&mut cmd, true);
         cmd.current_dir(meta.target_directory.parent().unwrap());
 
         // Set Rustc compiler path and flags
-        cmd.env("RUSTC", rustc_compiler);
+        cmd.env("RUSTC", rustc.map_or("rustc".to_string(), |c| String::from(c.to_str().unwrap())));
         if let Some(rust_flags) = rust_flags {
             cmd.env(
                 "CARGO_ENCODED_RUSTFLAGS",
